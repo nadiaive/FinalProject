@@ -12,7 +12,7 @@
       rel="stylesheet">
     <style>
       body {
-        padding-top: 3.5rem;
+        padding-top: 3.5rem; // 1 rem = 16px;
       }
 
       a.dropdown-toggle {
@@ -20,15 +20,23 @@
        }
 
        .material-icons.md-light {
-         color: rgba(255, 255, 255, 1); }
-       .material-icons.md-light.md-inactive {
-          color: rgba(255, 255, 255, 0.3); }
-          .material-icons.md-18 { font-size: 18px; }
-
-       img.color-blindness-icon {
-         width: 1.5rem;
-         height: 1.3rem;
+         color: rgba(255, 255, 255, 1);
        }
+
+       .material-icons.md-light.md-inactive {
+          color: rgba(255, 255, 255, 0.3);
+        }
+
+        .material-icons.md-18 {
+          font-size: 18px;
+        }
+
+        #scroll-to-top{
+          position: fixed;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          cursor: pointer;
+        }
 
 
     </style>
@@ -53,19 +61,37 @@
            if(counter % 2 == 0){
              $("div").addClass("bg-dark text-warning");
              $("a").addClass("bg-warning text-light");
-             $("i.invert_colors").addClass("d-none")
-             $("i.invert_colors_off").removeClass("d-none")
+             $("i.invert_colors").addClass("d-none");
+             $("i.invert_colors_off").removeClass("d-none");
            }
            else {
              $("div").removeClass("bg-dark text-warning");
              $("a").removeClass("bg-warning text-light");
-             $("i.invert_colors").removeClass("d-none")
-             $("i.invert_colors_off").addClass("d-none")
+             $("i.invert_colors").removeClass("d-none");
+             $("i.invert_colors_off").addClass("d-none");
            }
              counter += 1;
              return counter;
          });
          });
+
+
+         window.onscroll = function() {
+           scrollFunction()
+         }
+function scrollFunction() {
+    if (document.documentElement.scrollTop > 100) { //refers to full standard mode som declared by <!doctype html>
+      $("button.scroll-to-top").removeClass("d-none");
+      $("scroll-to-top").addClass("d-inline");
+    } else {
+      $("button.scroll-to-top").removeClass("d-inline");
+      $("button.scroll-to-top").addClass("d-none");
+    }
+}
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+
 
     </script>
   </head>
@@ -76,6 +102,7 @@
         <a class="navbar-brand" href="#">Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
+          <span class="sr-only">(menu button)</span>
         </button>
         <div class="collapse navbar-collapse" id="navigation"><!-- "show" can be used here and the aria-expand will be true-->
           <ul class="navbar-nav">
@@ -148,6 +175,13 @@
     <footer class="container">
       <hr class="my-4">
       <p>© Final Project </p>
+    </footer>
+
+    <button onclick="topFunction()" type="button" class="btn btn-dark d-none scroll-to-top" id="scroll-to-top">
+      <span class="sr-only">(scroll to top button)</span>
+      <i class="material-icons align-middle">keyboard_arrow_up</i>
+    </button>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
