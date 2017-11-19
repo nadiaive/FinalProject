@@ -23,6 +23,7 @@
          color: rgba(255, 255, 255, 1); }
        .material-icons.md-light.md-inactive {
           color: rgba(255, 255, 255, 0.3); }
+          .material-icons.md-18 { font-size: 18px; }
 
        img.color-blindness-icon {
          width: 1.5rem;
@@ -52,10 +53,14 @@
            if(counter % 2 == 0){
              $("div").addClass("bg-dark text-warning");
              $("a").addClass("bg-warning text-light");
+             $("i.invert_colors").addClass("d-none")
+             $("i.invert_colors_off").removeClass("d-none")
            }
            else {
              $("div").removeClass("bg-dark text-warning");
              $("a").removeClass("bg-warning text-light");
+             $("i.invert_colors").removeClass("d-none")
+             $("i.invert_colors_off").addClass("d-none")
            }
              counter += 1;
              return counter;
@@ -95,7 +100,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="color-blindness-button">
-                <i class="material-icons">invert_colors</i>
+                <i class="material-icons md-18 align-middle invert_colors">invert_colors</i>
+                <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
               </a>
             </li>
           </ul>
