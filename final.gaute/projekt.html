@@ -5,31 +5,33 @@
     <title>Final projekt</title>
     <link href="projektstil.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script type="text/javascript" src="projektscript.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Final project</h1>
-
-    </div>
-    <div class="buttons">
-        <a id="knappEN" href="./gitar.html">Front page</a>
-    </div>
+    <h1>Final project</h1>
     <div class="hovedinnhold">
         <h3>Getting Started</h3>
-        <script src="projektscript.js"></script>
-        <button onclick="myFunction()">+</button><br>
-        <div id="log">initial content</div>        
-        <button onclick="myFunction()">-</button>
-        <div class="pie"></div>
-        <div class="pie1"
-        style="animation-delay: -20s"></div>
-        <div class="pie2"></div>
-        <svg viewBox="0 0 32 32">
-            <circle  r="16" cx="16" cy="16" />
-            <circle  r="16" cx="16" cy="16" /> 
-          </svg>
-          <div class="pie">20%</div>
+        <div class="nr">
+            <input type="button" value="+" onClick="increment(value)">
+            <div id="blue">0</div>
+            <input type="button" value="-" onClick="decrement(value)">
+        </div>
+
+        <div class="nr">
+            <input type="button" value="+" onClick="increment(value)">
+            <div id="green">0</div>
+            <input type="button" value="-" onClick="decrement(value)">
+        </div>
+
+        <div class=chart>
+            <div class="pie" data-start="0" data-value="30"></div>
+            <div class="pie highlight" data-start="30" data-value="30"></div>
+            <div class="pie" data-start="60" data-value="40"></div>
+            <div class="pie" data-start="100" data-value="80"></div>
+            <div class="pie big" data-start="180" data-value="180"></div>
+
+        </div>
     </div>
     <p class="bunntekst"></p>
 </body>
