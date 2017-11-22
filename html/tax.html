@@ -8,12 +8,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <!--google icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
+
     <style>
-      body {
+      /*body {
         padding-top: 3.5rem; // 1 rem = 16px;
-      }
+      }*/
 
       a.dropdown-toggle {
          outline: none
@@ -29,6 +33,7 @@
 
         .material-icons.md-18 {
           font-size: 18px;
+          cursor: pointer;
         }
 
         button.scroll-to-top{
@@ -36,8 +41,52 @@
           bottom: 0.5rem;
           right: 0.5rem;
           cursor: pointer;
+          background-color: #18bc9c;
         }
 
+        .jumbotron {
+          /*font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+          font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          background-color: #2c3e50;
+          height: 39.2rem;
+        }
+
+        nav.navbar-color {
+          background-color: #18bc9c;
+        }
+
+        nav.navbar {
+          font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        img.card-img {
+          opacity: 0.2;
+        }
+
+        a.active{
+          background-color: #2c3e50;
+        }
+
+        #incFont {
+          font-size: 1.1rem;
+          cursor: pointer;
+          background-color: #18bc9c;
+        }
+
+        #decFont {
+          font-size: 1.1rem;
+          cursor: pointer;
+          background-color: #18bc9c;
+        }
+
+        #color-blindness-button {
+          background-color: #18bc9c;
+          font-size: 1.1rem;
+        }
+
+        .scroll-to-top {
+          color: white;
+        }
 
     </style>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -59,16 +108,25 @@
       $(function() {
         $("#color-blindness-button").click(function(){
            if(counter % 2 == 0){
-             $("div").addClass("bg-dark text-warning");
-             $("a").addClass("bg-warning text-light");
+             $("div").addClass("bg-dark text-light");
+             $("a").addClass("bg-warning text-white");
+             $("h1").addClass("text-warning");
+             $("h4").addClass("text-warning");
+             $("button").addClass("bg-warning");
+             $("nav").addClass("bg-dark");
              $("i.invert_colors").addClass("d-none");
              $("i.invert_colors_off").removeClass("d-none");
            }
            else {
-             $("div").removeClass("bg-dark text-warning");
-             $("a").removeClass("bg-warning text-light");
+             $("div").removeClass("bg-dark text-light");
+             $("a").removeClass("bg-warning");
              $("i.invert_colors").removeClass("d-none");
              $("i.invert_colors_off").addClass("d-none");
+             $("nav").removeClass("bg-dark");
+             $("button").removeClass("bg-warning");
+             $("h1").removeClass("text-warning");
+             $("h4").removeClass("text-warning");
+
            }
              counter += 1;
              return counter;
@@ -93,62 +151,70 @@ function topFunction() {
 }
 
 
+
     </script>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="0">
     <!--assistive technologies attributes should be used-->
     <header>
-      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tax</a>
+      <nav class="navbar navbar-expand-md fixed-top mx-auto rounded navbar-dark navbar-color w-75">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="sr-only">(menu button)</span>
         </button>
-        <div class="collapse navbar-collapse" id="navigation"><!-- "show" can be used here and the aria-expand will be true-->
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navigation"><!-- "show" can be used here and the aria-expand will be true-->
           <ul class="navbar-nav">
+            <!--<li class="nav-item">
+              <a class="navbar-brand text-white" href="#">Tax</a>
+            </li>-->
             <li class="nav-item">
-              <a class="nav-link active" href="#" area-selected="true">Home<span class="sr-only">(current page)</span></a>
+              <a class="nav-link rounded text-white" href="#topic">Topic</span></a><!-- if active are used then area-selected="true"-->
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown">Dropdown</a>
+            <li class="nav-item">
+              <a class="nav-link rounded text-white" href="#introduction">Introduction</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded text-white" href="#proposal">Our Proposal</a>
+            </li>
+            <!--<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle rounded" href="#dropdown"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown">Dropdown</a>
                 <div class="dropdown-menu" id="navbarDropdown">
                   <a class="dropdown-item" href="#">item1</a>
                   <a class="dropdown-item" href="#">item2</a>
                   <a class="dropdown-item" href="#">item3</a>
-                  <div class="dropdown-divider"></div>
+                  <div role="separator" class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">special itam</a>
                 </div>
+            </li>-->
+            <li class="nav-item">
+              <button type="button" class="btn rounded text-white" id="incFont">A+</button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="incFont">A+</a>
+              <button type="button" class="btn rounded text-white" id="decFont">A-</button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="decFont">A-</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="color-blindness-button">
-                <i class="material-icons md-18 align-middle invert_colors">invert_colors</i>
+              <button type="button" class="btn rounded text-white" id="color-blindness-button">
+                <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
                 <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main role="main">
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-4">jumbotron</h1>
-          <p class="lead"> this is a jumbotron aria</p>
-          <hr class="my-4">
-          <p>more details here</p>
-          <a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a>
+      <div class="jumbotron jumbotron-fluid text-white" id="topic">
+        <div class="container mt-5">
+          <h1 class="display-4 text-uppercase text-center">why black labour is a worldwide issue ?</h1>
+          <p class="lead text-center">we present, discuss and find solution with our interactive website.</p>
+          <img src="logo.png" class="rounded mx-auto w-25 ml-auto d-block" alt="logo">
           </p>
         </div>
       </div>
+      <div class="bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md bg-warning">
+          <div class="col-md bg-warning" id="introduction">
             <h1>Head</h1>
             <p>
               What is tax?
@@ -156,7 +222,7 @@ function topFunction() {
             </p>
             <p><a class="btn btn-dark" href="#" role="button">more</a></p>
           </div>
-          <div class="col-md bg-info">
+          <div class="col-md bg-info" id="dropdown">
             <h1>Head</h1>
             <p>this is the first column
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
@@ -172,13 +238,22 @@ function topFunction() {
           </div>
         </div>
     </main>
+    <div class="card bg-dark text-white">
+  <img class="card-img" src="analysis.png" alt="Card image">
+  <div class="card-img-overlay"  id="proposal">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+</div>
     <footer class="container">
       <hr class="my-4">
       <p>© Final Project </p>
     </footer>
-    <button onclick="topFunction()" type="button" class="btn btn-dark d-none scroll-to-top">
+    <button onclick="topFunction()" type="button" class="btn d-none scroll-to-top">
       <span class="sr-only">(scroll to top button)</span>
-      <i class="material-icons align-middle">keyboard_arrow_up</i>
+      <i class="material-icons align-middle item-light">keyboard_arrow_up</i>
     </button>
 
 
@@ -187,5 +262,7 @@ function topFunction() {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="javascript.util.min.js"></script>
+
   </body>
 </html>
