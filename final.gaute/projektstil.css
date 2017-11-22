@@ -119,5 +119,14 @@ h1 {
     fill: yellowgreen;
     stroke: #655;
     stroke-width: 32;
-    stroke-dasharray: 16 100; /* for 38% */
+    stroke-dasharray: 20 100; /* for 38% */
+    
   }
+
+   #sirkel2 {
+    fill: yellowgreen;
+    stroke: rgb(20, 100, 192);
+    stroke-width: 32;
+    stroke-dasharray: 16 100; /* for 38% */
+
+  } 
