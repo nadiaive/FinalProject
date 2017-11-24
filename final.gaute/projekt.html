@@ -11,29 +11,70 @@
 <body>
     <h1>Final project</h1>
     <div class="hovedinnhold">
-        <h3>Getting Started</h3>
-        <div class="nr">
-            <input type="button" value="+" onClick="increment(value)">
-            <div id="blue">0</div>
-            <input type="button" value="-" onClick="decrement(value)">
+
+        <div id="paistykke">
+            <div id="block1"></div>
+            <h2 class="kategori1">Healthcare</h2>
+            <input class="button" type="button" value="-" onClick="decrement(value)">
+            <div id="blue">8</div>
+            <input class="button2" type="button" value="+" onClick="increment(value)">
         </div>
 
-        <div class="nr">
-            <input type="button" value="+" onClick="increment(value)">
-            <div id="green">0</div>
-            <input type="button" value="-" onClick="decrement(value)">
+        <div id="paistykke">
+            <div id="block2"></div>
+            <h2 class="kategori2">Transportation</h2>
+            <input class="button" type="button" value="-" onClick="decrement2(value)">
+            <div id="blue2">8</div>
+            <input class="button2" type="button" value="+" onClick="increment2(value)">
         </div>
+
+        <div id="paistykke">
+            <div id="block3"></div>
+            <h2 class="kategori3">Defence</h2>
+            <input class="button" type="button" value="-" onClick="decrement3(value)">
+            <div id="blue3">8</div>
+            <input class="button2" type="button" value="+" onClick="increment3(value)">
+        </div>
+
+        <div id="paistykke">
+            <div id="block4"></div>
+            <h2 class="kategori4">Schools</h2>
+            <input class="button" type="button" value="-" onClick="decrement4(value)">
+            <div id="blue4">8</div>
+            <input class="button2" type="button" value="+" onClick="increment4(value)">
+        </div> 
+
+        <div id="paistykke">
+            <div id="block5"></div>
+            <h2 class="kategori5">Wellfare</h2>
+            <input class="button" type="button" value="-" onClick="decrement5(value)">
+            <div id="blue5">8</div>
+            <input class="button2" type="button" value="+" onClick="increment5(value)">
+        </div>
+
+        <div id="paistykke">
+            <div id="block6"></div>
+            <h2 class="kategori6">Culture</h2>
+            <input class="button" type="button" value="-" onClick="decrement6(value)">
+            <div id="blue6">60</div>
+            <input class="button2" type="button" value="+" onClick="increment6(value)">
+        </div>
+
+        <h2>You have similar views with:</h2>
+        <img src="labour.png">
+
 
         <div class=chart>
             <div class="pie" data-start="0" data-value="30"></div>
             <div class="pie highlight" data-start="30" data-value="30"></div>
-            <div class="pie" data-start="60" data-value="40"></div>
-            <div class="pie" data-start="100" data-value="80"></div>
-            <div class="pie big" data-start="180" data-value="180"></div>
+            <div class="pie" data-start="60" data-value="30"></div>
+            <div class="pie" data-start="90" data-value="30"></div>
+            <div class="pie" data-start="120" data-value="30"></div>
+            <div class="pie big" data-start="150" data-value="210"></div>
 
         </div>
     </div>
-    <p class="bunntekst"></p>
+
 </body>
 
 </html>
