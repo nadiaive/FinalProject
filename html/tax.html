@@ -14,9 +14,17 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
 
+
+
+
     <style>
       body {
         padding-top: 56px; // 1 rem = 16px;
+        background-color: #f5f8fa;
+        font-family:  Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
+      .main {
       }
 
       a.dropdown-toggle {
@@ -50,17 +58,12 @@
 
         .topic {
           /*font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-          font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
           background-image: linear-gradient(1deg, #000000, #2c3e50);
         }
 
         nav.navbar-color {
           background-image: linear-gradient(1deg, #0070ba, #1546a0);
                }
-
-        nav.navbar {
-          font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
 
         img.card-img {
           opacity: 0.2;
@@ -141,7 +144,69 @@
              counter += 1;
              return counter;
          });
-         });
+       });
+
+  var counter = 0;
+    $(function() {
+      $("#button1").click(function(){
+         if(counter % 2 == 0){
+           $("span.dtext1").removeClass("d-none");
+           $("span.dotting1").addClass("d-none");
+           $("span.more1").addClass("d-none");
+           $("span.less1").removeClass("d-none");
+         }
+         else {
+           $("span.dtext1").addClass("d-none");
+           $("span.dotting1").removeClass("d-none");
+           $("span.less1").addClass("d-none");
+           $("span.more1").removeClass("d-none");
+         }
+           counter += 1;
+           return counter;
+       });
+     });
+
+  var counter = 0;
+    $(function() {
+      $("#button2").click(function(){
+       if(counter % 2 == 0){
+         $("span.dtext2").removeClass("d-none");
+         $("span.dotting2").addClass("d-none");
+         $("span.more2").addClass("d-none");
+         $("span.less2").removeClass("d-none");
+       }
+       else {
+         $("span.dtext2").addClass("d-none");
+         $("span.dotting2").removeClass("d-none");
+         $("span.less2").addClass("d-none");
+         $("span.more2").removeClass("d-none");
+       }
+         counter += 1;
+         return counter;
+     });
+   });
+
+   var counter = 0;
+     $(function() {
+       $("#button3").click(function(){
+        if(counter % 2 == 0){
+          $("span.dtext3").removeClass("d-none");
+          $("span.dotting3").addClass("d-none");
+          $("span.more3").addClass("d-none");
+          $("span.less3").removeClass("d-none");
+        }
+        else {
+          $("span.dtext3").addClass("d-none");
+          $("span.dotting3").removeClass("d-none");
+          $("span.less3").addClass("d-none");
+          $("span.more3").removeClass("d-none");
+        }
+          counter += 1;
+          return counter;
+      });
+    });
+
+
 
 
          window.onscroll = function() {
@@ -164,10 +229,10 @@ function topFunction() {
 
     </script>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--assistive technologies attributes should be used-->
     <header>
-      <nav class="navbar navbar-expand-md fixed-top mx-auto rounded-0 navbar-dark navbar-color ">
+      <nav class="navbar navbar-expand-md fixed-top mx-auto rounded-0 navbar-dark navbar-color " role="navigation">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="sr-only">(menu button)</span>
@@ -180,6 +245,9 @@ function topFunction() {
             </li>
             <li class="nav-item">
               <a class="nav-link rounded text-white text-center" href="#introduction">Introduction</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded text-white text-center" href="#challenge">Challenge</a>
             </li>
             <li class="nav-item">
               <a class="nav-link rounded text-white text-center" href="#proposal">Our Proposal</a>
@@ -213,48 +281,56 @@ function topFunction() {
     </header>
     <main role="main">
       <div class="card topic text-white text-center mx-auto rounded-0 py-5" id="topic" data-offset="50">
-  <div class="card-body">
-    <h1 class="card-title text-uppercase">why black labour is a worldwide issue ?</h1>
-    <p class="card-text">we present, discuss and find solution with our interactive website.</p>
-  </div>
-  <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo  ">
-</div>
-
+        <div class="card-body">
+          <h1 class="card-title text-uppercase">why black labour is a worldwide issue ?</h1>
+          <p class="card-text">we present, discuss and find solution with our interactive website.</p>
+        </div>
+        <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo  ">
+      </div>
+      <div class="container pt-5"  id="introduction">
         <div class="row">
-          <div class="col-md-12 bg-warning" id="introduction">
-            <h1>What is taxes?</h1>
-            <p>
-              Taxes are monetary contributions that citizens pay to the government. They are an important source of income to cover public expenses (Store Norske Leksikon, 2014). These expenses are for example public health care, free education, social welfare and care for the elderly. These are services that are part of the (Norwegian) welfare system, and each year they cost the public great amounts of money. Therefore it is essential that everyone contributes and pay their share (Skatteetaten, 2017). The tax principle is based on everyone paying according to their ability and receiving benefits by their needs. Those with a high income, which determines ability, pay more than those with a lower income.
-            </p>
-            <p><a class="btn btn-dark" href="#" role="button">more</a></p>
+          <div class="col-md">
+            <div class="card">
+              <h4 class="card-header">What is taxes ?</h4>
+              <div class="card-body">
+                <p class="card-text">
+                    Taxes are monetary contributions that citizens pay to the government.They are an important source of income to cover public expenses (Store Norske Leksikon, 2014).<span class="dotting1">..</span><span class="dtext1 d-none"> These expenses are for example public health care, free education, social welfare and care for the elderly. These are services that are part of the (Norwegian) welfare system, and each year they cost the public great amounts of money. Therefore it is essential that everyone contributes and pay their share (Skatteetaten, 2017). The tax principle is based on everyone paying according to their ability and receiving benefits by their needs. Those with a high income, which determines ability, pay more than those with a lower income.</span></p>
+                    <a class="btn btn-dark" href="#sameposition" id="button1" role="button"><span class="more1">more</span><span  class="less1 d-none">less</span></a>
+              </div>
+            </div>
           </div>
-          <div class="col-md bg-info" id="dropdown">
-            <h1>The Challenge</h1>
-            <p>This fall there was a government election in Norway. As a part of the election campaigns several discussions about taxes arose. Where some parties and politicians want to cut taxes, others want to increase them. A few weeks later, the national budget was presented to the public. The national budget is an estimate of country’s predicted income and expenses for the coming year, and also determines how the government wants to spend future income and how they plan to prioritize between predicted expenses (Thomassen & Stoltz, 2017).
+        </div>
+        <img src="taxman.jpg" class="img-fluid pt-5" alt=" ">
+        <div class="row pt-5" id="challenge">
+          <div class="col-md">
+            <div class="card">
+              <h4 class="card-header">The Challenge</h4>
+              <div class="card-body">
+                <p class="card-text">
+                  This fall there was a government election in Norway. As a part of the election campaigns several discussions about taxes arose. Where some parties and politicians want to cut taxes, others want to increase them.<span class="dotting2">..</span><span class="dtext2 d-none"> A few weeks later, the national budget was presented to the public. The national budget is an estimate of country’s predicted income and expenses for the coming year, and also determines how the government wants to spend future income and how they plan to prioritize between predicted expenses (Thomassen & Stoltz, 2017).
 
-              In 2014 there were estimations that about 150 billion NOK were not paid in taxes as a result of a black labor market valued to 420 billion NOK, which was 14 % of the gross national product (Vestreng, 2014). These are unpaid contributions that could be valuable to public goods and services. Furthermore, workers that don’t pay taxes don’t have the same security and rights, if any, as those who do. This includes, among other things, the right to retirement money, sick leave and minimum wage.
+                    In 2014 there were estimations that about 150 billion NOK were not paid in taxes as a result of a black labor market valued to 420 billion NOK, which was 14 % of the gross national product (Vestreng, 2014). These are unpaid contributions that could be valuable to public goods and services. Furthermore, workers that don’t pay taxes don’t have the same security and rights, if any, as those who do. This includes, among other things, the right to retirement money, sick leave and minimum wage.
 
-              We see this as a challenge because our general impression is that there is a lot of complaining about taxes, while we believe very few would be happy if we had to pay to put our children through school or every time we needed to see the doctor. Furthermore, there seems to be little awareness of the consequences of black labor, both for the individual worker and for the society as a whole (Steen, 2016).
-              </p>
-            <p><a class="btn btn-dark" href="#" role="button">more</a></p>
+                    We see this as a challenge because our general impression is that there is a lot of complaining about taxes, while we believe very few would be happy if we had to pay to put our children through school or every time we needed to see the doctor. Furthermore, there seems to be little awareness of the consequences of black labor, both for the individual worker and for the society as a whole (Steen, 2016).</p>
+                    <a class="btn btn-dark" href="#sameposition" id="button2" role="button"><span class="more2">more</span><span  class="less2 d-none">less</span></a>
+              </div>
+            </div>
           </div>
-          <div class="col-md bg-secondary">
-            <h1>Our solution</h1>
-            <p>Our goal is to create a better understanding of the concept of taxes, why we pay them and how the money is distributed. By visualizing how our tax money is spent, we believe that it will be easier for people to make informed choices, for example as for what they want to vote for in elections. One way we aim to do this is by giving a graphic presentation of the national budget, and to show how different parties aim to allocate the government’s income between different posts.
-            </p>
-            <p><a class="btn btn-dark" href="#" role="button">more</a></p>
+        </div>
+        <img src="taxman.jpg" class="img-fluid pt-5" alt=" ">
+        <div class="row pt-5" id="proposal">
+          <div class="col-md">
+            <div class="card">
+              <h4 class="card-header">Our solution</h4>
+              <div class="card-body">
+                <p class="card-text">
+                  Our goal is to create a better understanding of the concept of taxes, why we pay them and how the money is distributed. By visualizing how our tax money is spent, we believe that it will be easier for people to make informed choices,<span class="dotting3">..</span><span class="dtext3 d-none"> for example as for what they want to vote for in elections. One way we aim to do this is by giving a graphic presentation of the national budget, and to show how different parties aim to allocate the government’s income between different posts.</p>
+                    <a class="btn btn-dark" href="#sameposition" id="button3" role="button"><span class="more3">more</span><span  class="less3 d-none">less</span></a>
+              </div>
+            </div>
           </div>
         </div>
     </main>
-    <div class="card bg-dark text-white">
-  <img class="card-img" src="analysis.png" alt="Card image">
-  <div class="card-img-overlay"  id="proposal">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
-  </div>
-</div>
-</div>
     <footer class="container">
       <hr class="my-4">
       <p>© Final Project </p>
