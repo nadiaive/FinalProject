@@ -49,20 +49,16 @@
           bottom: 0.5rem;
           right: 0.5rem;
           cursor: pointer;
-          background-image: linear-gradient(1deg, #006400, #008000);
+          background-color: #3097D1;
         }
 
         .scroll-to-top {
           color: white;
         }
 
-        .topic {
-          /*font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-          background-image: linear-gradient(1deg, #000000, #2c3e50);
-        }
 
         nav.navbar-color {
-          background-image: linear-gradient(1deg, #0070ba, #1546a0);
+          background-color: #3097D1;
                }
 
         img.card-img {
@@ -70,26 +66,23 @@
         }
 
         a.active{
-          background-image: linear-gradient(1deg, #006400, #008000);
+          background-color: #808080;
         }
 
         #incFont {
           font-size: 1.1rem;
           cursor: pointer;
-          background-image: linear-gradient(1deg, #000000, #2c3e50);
           width: 46px;
              }
 
         #decFont {
           font-size: 1.1rem;
           cursor: pointer;
-          background-image: linear-gradient(1deg, #000000, #2c3e50);
           width: 46px;
 
               }
 
         #color-blindness-button {
-          background-image: linear-gradient(1deg, #000000, #2c3e50);
           font-size: 1.1rem;
         }
 
@@ -121,7 +114,7 @@
       $(function() {
         $("#color-blindness-button").click(function(){
            if(counter % 2 == 0){
-             $("div").addClass("bg-dark text-light");
+             $("div").addClass(" text-dark");
              $("a").addClass("bg-warning text-white");
              $("h1").addClass("text-warning");
              $("h4").addClass("text-warning");
@@ -131,7 +124,7 @@
              $("i.invert_colors_off").removeClass("d-none");
            }
            else {
-             $("div").removeClass("bg-dark text-light");
+             $("div").removeClass(" text-light");
              $("a").removeClass("bg-warning");
              $("i.invert_colors").removeClass("d-none");
              $("i.invert_colors_off").addClass("d-none");
@@ -139,7 +132,6 @@
              $("button").removeClass("bg-warning");
              $("h1").removeClass("text-warning");
              $("h4").removeClass("text-warning");
-
            }
              counter += 1;
              return counter;
@@ -207,8 +199,6 @@
     });
 
 
-
-
          window.onscroll = function() {
            scrollFunction()
          }
@@ -232,7 +222,7 @@ function topFunction() {
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--assistive technologies attributes should be used-->
     <header>
-      <nav class="navbar navbar-expand-md fixed-top mx-auto rounded-0 navbar-dark navbar-color " role="navigation">
+      <nav class="navbar navbar-expand-lg fixed-top mx-auto rounded-0 navbar-dark navbar-color " role="navigation">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="sr-only">(menu button)</span>
@@ -259,28 +249,25 @@ function topFunction() {
               <a class="nav-link rounded text-white text-center" href="#aboutus">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded text-white text-center" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn rounded-0 text-white" id="incFont">A</button>
+              <a role="button" href="#sameposition" class="btn rounded-0 text-white" id="incFont">A</a>
               <!--can use a tag instead of button then we need role="button" and should assign "href" to an id
               even if its not exist so tab button does not hop over it-->
             </li>
             <li class="nav-item">
-              <button type="button" class="btn rounded-0 text-white" id="decFont">a</button>
+              <a role="button" href="#sameposition" class="btn rounded-0 text-white" id="decFont">a</a>
             </li>
             <li class="nav-item">
-              <button type="button" class="btn rounded-0 text-white" id="color-blindness-button">
+              <a role="button" href="#sameposition" class="btn rounded-0 text-white" id="color-blindness-button">
                 <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
                 <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main role="main">
-      <div class="card topic text-white text-center mx-auto rounded-0 py-5" id="topic" data-offset="50">
+      <div class="card topic text-white text-center mx-auto rounded-0 py-5 bg-dark" id="topic" data-offset="50">
         <div class="card-body">
           <h1 class="card-title text-uppercase">why black labour is a worldwide issue ?</h1>
           <p class="card-text">we present, discuss and find solution with our interactive website.</p>
