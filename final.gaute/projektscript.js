@@ -1,24 +1,54 @@
-/* var person = prompt("Please enter your name", "Harry Potter");
 
-if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "Hello " + person + "! How are you today?";
-} */
+var x = 8;   
+function increment(value) {
+    document.getElementById('blue').innerHTML = ++x;
+}
 
-$$('.pie').forEach(function(pie) {
-    var p = parseFloat(pie.textContent);
-    var NS = "http://www.w3.org/2000/svg";
-    var svg = document.createElementNS(NS, "svg");
-    var circle = document.createElementNS(NS, "circle");
-    var title = document.createElementNS(NS, "title");
-    circle.setAttribute("r", 16);
-    circle.setAttribute("cx", 16);
-    circle.setAttribute("cy", 16);
-    circle.setAttribute("stroke-dasharray", p + " 100");
-    svg.setAttribute("viewBox", "0 0 32 32");
-    title.textContent = pie.textContent;
-    pie.textContent = '';
-    svg.appendChild(title);
-    svg.appendChild(circle);
-    pie.appendChild(svg);
-  });
+function decrement(value) {
+    document.getElementById('blue').innerHTML = --x;
+}
+
+var y = 8;   
+function increment2(value) {
+    document.getElementById('blue2').innerHTML = ++y;
+}
+
+function decrement2(value) {
+    document.getElementById('blue2').innerHTML = --y;
+}
+
+var z = 8;   
+function increment3(value) {
+    document.getElementById('blue3').innerHTML = ++z;
+}
+
+function decrement3(value) {
+    document.getElementById('blue3').innerHTML = --z;
+}
+
+var v = 8;   
+function increment4(value) {
+    document.getElementById('blue4').innerHTML = ++v;
+}
+
+function decrement4(value) {
+    document.getElementById('blue4').innerHTML = --v;
+}
+
+var u = 8;   
+function increment5(value) {
+    document.getElementById('blue5').innerHTML = ++u;
+}
+
+function decrement5(value) {
+    document.getElementById('blue5').innerHTML = --u;
+}
+
+var p = 8;   
+function increment6(value) {
+    document.getElementById('blue6').innerHTML = ++p;
+}
+
+function decrement6(value) {
+    document.getElementById('blue6').innerHTML = --p;
+}
