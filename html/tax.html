@@ -123,6 +123,7 @@
              $("i.invert_colors").addClass("d-none");
              $("i.invert_colors_off").removeClass("d-none");
              $("body").addClass("bg-dark");
+             $("p.footer").addClass("text-white");
            }
            else {
              $("div").removeClass(" text-light");
@@ -134,6 +135,7 @@
              $("h1").removeClass("text-warning");
              $("h4").removeClass("text-warning");
              $("body").removeClass("bg-dark");
+             $("p.footer").removeClass("text-white");
            }
              counter += 1;
              return counter;
@@ -271,8 +273,8 @@ function topFunction() {
     <main role="main">
       <div class="card topic text-white text-center mx-auto rounded-0 py-5 bg-dark" id="topic" data-offset="50">
         <div class="card-body">
-          <h1 class="card-title text-uppercase">why black labour is a worldwide issue ?</h1>
-          <p class="card-text">we present, discuss and find solution with our interactive website.</p>
+          <h1 class="card-title text-uppercase text-white">why black labour is a worldwide issue ?</h1>
+          <p class="card-text text-white">we present, discuss and find solution with our interactive website.</p>
         </div>
         <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo  ">
       </div>
@@ -324,7 +326,7 @@ function topFunction() {
     </main>
     <footer class="container">
       <hr class="my-4">
-      <p>Final Project</p>
+      <p class="footer">Final Project</p>
     </footer>
     <button onclick="topFunction()" type="button" class="btn d-none scroll-to-top">
       <span class="sr-only">(scroll to top button)</span>
