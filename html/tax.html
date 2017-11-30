@@ -196,9 +196,6 @@
       });
     });
 
-
-
-
          window.onscroll = function() {
            scrollFunction()
          }
@@ -214,6 +211,8 @@ function scrollFunction() {
 function topFunction() {
     document.documentElement.scrollTop = 0;
 }
+
+
 
     </script>
   </head>
@@ -257,7 +256,7 @@ function topFunction() {
             </li>
             <li class="nav-item">
               <form class="form-inline nav-link" id="search">
-                <input class="form-control form-control-sm rounded-0" type="search" placeholder="Search" aria-labelledby="search">
+                <input class="form-control form-control-sm rounded-0" id="input" type="search" placeholder="Search" aria-labelledby="search">
                 <button class="btn btn-sm bg-secondary submit-button rounded-0" type="submit">
                   <i class="material-icons md-18 align-middle">search</i>
                 </button>
