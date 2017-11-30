@@ -196,6 +196,26 @@
       });
     });
 
+    var counter = 0;
+     $(function() {
+       $("#button4").click(function(){
+        if(counter % 2 == 0){
+          $("span.dtext4").removeClass("d-none");
+          $("span.dotting4").addClass("d-none");
+          $("span.more4").addClass("d-none");
+          $("span.less4").removeClass("d-none");
+        }
+        else {
+          $("span.dtext4").addClass("d-none");
+          $("span.dotting4").removeClass("d-none");
+          $("span.less4").addClass("d-none");
+          $("span.more4").removeClass("d-none");
+        }
+          counter += 1;
+          return counter;
+      });
+    });
+
          window.onscroll = function() {
            scrollFunction()
          }
@@ -351,7 +371,25 @@ function topFunction() {
             </div>
           </div>
         </div>
+    <div class="row pt-5 justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <h4 class="card-header">Sources</h4>
+          <div class="card-body">
+            <p class="card-text">
+              <span class="dotting4">..</span><span class="dtext4 d-none"><br><br>
+              Skatteetaten. (2017, 10. November). Skatt i Norge - litt om skattesystemet. Hentet 10. November, 2017 fra Skatteetaten: http://www.skatteetaten.no/no/Person/Skattekort-og-forskuddsskatt/Utenlandsk-arbeidstaker/Skatt-i-Norge---litt-om-skattesystemet/<br>
+              Steen, J. R. (2016, 23. Mai). Svart arbeidsmarked i de tusen hjem. Hentet 10. November, 2017 fra Arbeidslivet.no: http://www.arbeidslivet.no/Arbeid1/Arbeidsmarkedet/Svart-arbeidsmarked-i-de-tusen-hjem/<br>
+              Store Norske Leksikon. (2014, 21. Desember). Skatt. Hentet 10. November, 2017 fra Store Norske Leksikon: https://snl.no/skatt<br>
+              Thomassen, E., & Stoltz, G. (2017, 9. Oktober). Statsbudsjett. Hentet 10. November, 2017 fra Store Norske Leksikon: https://snl.no/statsbudsjett<br>
+              Vestreng, T. H. (2014, 30. Mai). Svart arbeid for 420 mrd. kroner. Hentet 10. November, 2017 fra Dagsavisen: http://www.dagsavisen.no/innenriks/svart-arbeid-for-420-mrd-kroner-1.283807<br>
+              </p>
+                <a class="btn btn-dark" href="#sameposition" id="button4" role="button"><span class="more4">more</span><span  class="less4 d-none">less</span></a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
     </main>
     <footer class="container">
       <hr class="my-4">
