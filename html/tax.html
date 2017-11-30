@@ -196,6 +196,26 @@
       });
     });
 
+    var counter = 0;
+     $(function() {
+       $("#button4").click(function(){
+        if(counter % 2 == 0){
+          $("span.dtext4").removeClass("d-none");
+          $("span.dotting4").addClass("d-none");
+          $("span.more4").addClass("d-none");
+          $("span.less4").removeClass("d-none");
+        }
+        else {
+          $("span.dtext4").addClass("d-none");
+          $("span.dotting4").removeClass("d-none");
+          $("span.less4").addClass("d-none");
+          $("span.more4").removeClass("d-none");
+        }
+          counter += 1;
+          return counter;
+      });
+    });
+
 
          window.onscroll = function() {
            scrollFunction()
@@ -328,6 +348,20 @@ function topFunction() {
                     Our goal is to create a better understanding of the concept of taxes, why we pay them and how the money is distributed. By visualizing how our tax money is spent, we believe that it will be easier for people to make informed choices, for example as for what they want to vote for in elections. One way we aim to do this is by giving a graphic presentation of the national budget, and to show how different parties aim to allocate the government’s income between different posts.  Furthermore, we hope that this tool will increase understanding of why it is necessary to pay taxes, and perhaps create a stronger incentive to do so.
                   </p>
                     <a class="btn btn-dark" href="#sameposition" id="button3" role="button"><span class="more3">more</span><span  class="less3 d-none">less</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-5 justify-content-center" id="proposal">
+          <div class="col-md-10">
+            <div class="card">
+              <h4 class="card-header">About Us</h4>
+              <div class="card-body">
+                <p class="card-text">
+                  We are four first year students studying technology at HiOA. This is our final project in the class DAFE1200/ITPE1200 Webprosjekt.<span class="dotting4">..</span><span class="dtext4 d-none"><br><br>
+                  Our aim was to identify a social or technological challenge, and find a potential solution to this. On this webpage we present the problem and the solution we have created, along with a visual guide for how we want it to work and look like. 
+                  </p>
+                    <a class="btn btn-dark" href="#sameposition" id="button4" role="button"><span class="more4">more</span><span  class="less4 d-none">less</span></a>
               </div>
             </div>
           </div>
