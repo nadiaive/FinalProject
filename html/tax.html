@@ -19,7 +19,7 @@
 
     <style>
       body {
-        padding-top: 56px;
+        padding-top: 39px;
         background-color: #f5f8fa;
         font-family:  Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
@@ -77,6 +77,11 @@
         .close-button {
           background-color: #3097D1;
           cursor: pointer;
+        }
+
+        .close-modal {
+          cursor: pointer;
+
         }
 
         .logout-button {
@@ -216,51 +221,53 @@ function topFunction() {
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--assistive technologies attributes should be used-->
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top rounded-0 navbar-dark navbar-color" role="navigation">
+      <nav class="navbar navbar-expand-lg fixed-top rounded-0 navbar-dark navbar-color py-1" role="navigation">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="sr-only">(menu button)</span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navigation"><!-- "show" can be used here and the aria-expand will be true-->
           <!--dont use d-flex its make dropdown expand automatic-->
-          <ul class="navbar-nav mt-1">
-            <li class="nav-item">
+          <ul class="navbar-nav">
+            <li class="nav-item mt-1">
               <a class="nav-link rounded text-white text-center" href="#topic">Topic</a><!-- if active are used then area-selected="true"-->
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a class="nav-link rounded text-white text-center" href="#introduction">Introduction</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a class="nav-link rounded text-white text-center" href="#challenge">Challenge</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a class="nav-link rounded text-white text-center" href="#proposal">Our Proposal</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a class="nav-link rounded text-white text-center" href="#aboutus">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a role="button" class="nav-link btn rounded-0 text-white"  href="#sameposition" id="incFont">A</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a role="button" class="nav-link btn rounded-0 text-white"  href="#sameposition" id="decFont">a</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mt-1">
               <a role="button" class="nav-link btn rounded-0 text-white"  href="#sameposition" id="color-blindness-button">
                 <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
                 <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
               </a>
             </li>
+            <div class="row justify-content-center ml-3">
             <li class="nav-item align-self-center">
-              <form class="form-inline justify-content-center" id="search">
+              <form class="form-inline" id="search">
                 <input class="form-control form-control-sm rounded-0" type="search" placeholder="Search" aria-labelledby="search">
                 <button class="btn btn-sm  bg-secondary rounded-0" type="submit">
                   <i class="material-icons md-18 align-middle">search</i>
                 </button>
               </form>
             </li>
+          </div>
             <li class="nav-item align-self-center">
-              <button class="btn btn-sm btn-light my-2 logout-button" data-toggle="modal" data-target="#logout">
+              <button class="btn btn-sm btn-light my-2 ml-5 logout-button" data-toggle="modal" data-target="#logout">
                 <i class="material-icons md-18 align-middle">lock_outline</i>LogOut
               </button>
             </li>
@@ -341,14 +348,14 @@ function topFunction() {
         <div class="modal-content">
           <div class="modal-header card-header">
             <h5 class="modal-title" id="logoutdocument">Are you sure you want to leave us ?</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <button type="button" class="close close-button" data-dismiss="modal" aria-label="close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">If you are ready to leave this page please select "LogOut"
           </div>
           <div class="ml-auto mb-2 mt-3 mr-2">
-            <button type="button" class="btn close-button" data-dismiss="modal">Close</button>
+            <button type="button" class="btn close-modal" data-dismiss="modal">Close</button>
             <a  class="btn btn-secondary" href="signin.html">LogOut</a>
           </div>
         </div>
