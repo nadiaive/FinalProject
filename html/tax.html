@@ -76,7 +76,13 @@
 
         .close-button {
           background-color: #3097D1;
+          cursor: pointer;
         }
+
+        .logout-button {
+          cursor: pointer;
+        }
+
 
 
     </style>
@@ -219,10 +225,10 @@ function topFunction() {
           <!--dont use d-flex its make dropdown expand automatic-->
           <ul class="navbar-nav mt-1">
             <li class="nav-item">
-              <a class="nav-link rounded text-white text-center" href="#topic">Topic</span></a><!-- if active are used then area-selected="true"-->
+              <a class="nav-link rounded text-white text-center" href="#topic">Topic</a><!-- if active are used then area-selected="true"-->
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded text-white text-center" href="#introduction">Introduction</span></a>
+              <a class="nav-link rounded text-white text-center" href="#introduction">Introduction</a>
             </li>
             <li class="nav-item">
               <a class="nav-link rounded text-white text-center" href="#challenge">Challenge</a>
@@ -254,7 +260,7 @@ function topFunction() {
               </form>
             </li>
             <li class="nav-item align-self-center">
-              <button class="btn btn-sm btn-light my-2" data-toggle="modal" data-target="#logout">
+              <button class="btn btn-sm btn-light my-2 logout-button" data-toggle="modal" data-target="#logout">
                 <i class="material-icons md-18 align-middle">lock_outline</i>LogOut
               </button>
             </li>
@@ -268,7 +274,7 @@ function topFunction() {
           <h1 class="card-title text-uppercase text-white">why black labour is a worldwide issue ?</h1>
           <p class="card-text text-white">we present, discuss and find solution with our interactive website.</p>
         </div>
-        <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo">
+        <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo a pie chart divided into four pieces with four different colors and sizes">
       </div>
       <div class="container py-5"  id="introduction">
         <div class="row py-5 justify-content-center">
@@ -333,7 +339,7 @@ function topFunction() {
     <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutdocument" aria-hidden="true"><!--tabindex to make the content focusable to force voiceover to not skip the content due to some browser like safari-->
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header card-header">
             <h5 class="modal-title" id="logoutdocument">Are you sure you want to leave us ?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="close">
               <span aria-hidden="true">&times;</span>
@@ -341,9 +347,9 @@ function topFunction() {
           </div>
           <div class="modal-body">If you are ready to leave this page please select "LogOut"
           </div>
-          <div class="modal-footer">
+          <div class="ml-auto mb-2 mt-3 mr-2">
             <button type="button" class="btn close-button" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-secondary">LogOut</button>
+            <a  class="btn btn-secondary" href="signin.html">LogOut</a>
           </div>
         </div>
       </div>
