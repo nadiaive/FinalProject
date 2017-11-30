@@ -209,7 +209,7 @@ function topFunction() {
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--assistive technologies attributes should be used-->
-    <header class="">
+    <header>
       <nav class="navbar navbar-expand-lg fixed-top rounded-0 navbar-dark navbar-color" role="navigation">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -217,7 +217,7 @@ function topFunction() {
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navigation"><!-- "show" can be used here and the aria-expand will be true-->
           <!--dont use d-flex its make dropdown expand automatic-->
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mt-1">
             <li class="nav-item">
               <a class="nav-link rounded text-white text-center" href="#topic">Topic</span></a><!-- if active are used then area-selected="true"-->
             </li>
@@ -254,7 +254,8 @@ function topFunction() {
               </form>
             </li>
             <li class="nav-item align-self-center">
-              <button class="btn btn-sm btn-light my-2" data-toggle="modal" data-target="#logout">LogOut
+              <button class="btn btn-sm btn-light my-2" data-toggle="modal" data-target="#logout">
+                <i class="material-icons md-18 align-middle">lock_outline</i>LogOut
               </button>
             </li>
           </ul>
