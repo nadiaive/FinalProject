@@ -66,12 +66,16 @@
         }
 
         a.active{
-          background-color: #808080;
+          background-color: #868e96;
         }
 
         .logo {
           width: 10rem; // 1 rem = 16px;
           height: 10rem;
+        }
+
+        .close-button {
+          background-color: #3097D1;
         }
 
 
@@ -205,8 +209,8 @@ function topFunction() {
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--assistive technologies attributes should be used-->
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top mx-auto rounded-0 navbar-dark navbar-color " role="navigation">
+    <header class="">
+      <nav class="navbar navbar-expand-lg fixed-top rounded-0 navbar-dark navbar-color" role="navigation">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation" aria-label="toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="sr-only">(menu button)</span>
@@ -227,9 +231,6 @@ function topFunction() {
               <a class="nav-link rounded text-white text-center" href="#proposal">Our Proposal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded text-white text-center" href="#archive">Archive</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded text-white text-center" href="#aboutus">About Us</a>
             </li>
             <li class="nav-item">
@@ -244,11 +245,19 @@ function topFunction() {
                 <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
               </a>
             </li>
+            <li class="nav-item align-self-center">
+              <form class="form-inline justify-content-center" id="search">
+                <input class="form-control form-control-sm rounded-0" type="search" placeholder="Search" aria-labelledby="search">
+                <button class="btn btn-sm  bg-secondary rounded-0" type="submit">
+                  <i class="material-icons md-18 align-middle">search</i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item align-self-center">
+              <button class="btn btn-sm btn-light my-2" data-toggle="modal" data-target="#logout">LogOut
+              </button>
+            </li>
           </ul>
-          <form class="form-inline" id="search">
-            <input class="form-control-sm mr-1" type="search" placeholder="Search" aria-labelledby="search">
-            <button class="btn btn-sm btn-outline-dark" type="submit">Search</button>
-          </form>
         </div>
       </nav>
     </header>
@@ -258,11 +267,11 @@ function topFunction() {
           <h1 class="card-title text-uppercase text-white">why black labour is a worldwide issue ?</h1>
           <p class="card-text text-white">we present, discuss and find solution with our interactive website.</p>
         </div>
-        <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo  ">
+        <img class="card-img-bottom rounded mx-auto logo " src="logo.png" alt="logo">
       </div>
-      <div class="container pt-5"  id="introduction">
-        <div class="row">
-          <div class="col-md">
+      <div class="container py-5"  id="introduction">
+        <div class="row py-5 justify-content-center">
+          <div class="col-md-10">
             <div class="card">
               <h4 class="card-header">What is taxes ?</h4>
               <div class="card-body">
@@ -273,10 +282,14 @@ function topFunction() {
             </div>
           </div>
         </div>
-        <img src="taxman.jpg" class="img-fluid pt-5" alt="A cartoon character of a man running around carrying a bag of money and an outstretched hand with word taxes on it seems like want to catch him ">
+        <div class="row justify-content-center py-5">
+          <div class="col-md-10">
+        <img src="taxman.jpg" class="img-fluid" alt="A cartoon character of a man running around carrying a bag of money and an outstretched hand with word taxes on it seems like want to catch him ">
         <a href="https://www.conservativereview.com/-/media/images/conservative-review/article-images/2016/august/tax-man.jpg?h=675&w=1200&la=en&hash=297BBECE66B78AA43EDDD78182BC94690D88E5AA">source</a>
-        <div class="row pt-5" id="challenge">
-          <div class="col-md">
+        </div>
+      </div>
+        <div class="row py-5 justify-content-center" id="challenge">
+          <div class="col-md-10">
             <div class="card">
               <h4 class="card-header">The Challenge</h4>
               <div class="card-body">
@@ -293,8 +306,8 @@ function topFunction() {
             </div>
           </div>
         </div>
-        <div class="row pt-5" id="proposal">
-          <div class="col-md">
+        <div class="row py-5 justify-content-center" id="proposal">
+          <div class="col-md-10">
             <div class="card">
               <h4 class="card-header">Our solution</h4>
               <div class="card-body">
@@ -316,8 +329,24 @@ function topFunction() {
       <span class="sr-only">(scroll to top button)</span>
       <i class="material-icons align-middle item-light">keyboard_arrow_up</i><!--only on Chrome-->
     </button>
-
-
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutdocument" aria-hidden="true"><!--tabindex to make the content focusable to force voiceover to not skip the content due to some browser like safari-->
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutdocument">Are you sure you want to leave us ?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">If you are ready to leave this page please select "LogOut"
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn close-button" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary">LogOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
