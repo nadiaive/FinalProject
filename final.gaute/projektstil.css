@@ -51,6 +51,7 @@ body {
   margin-right: auto;
   padding-top: 48px;
   padding-bottom: 48px;
+  border: 1px solid rgba(0,0,0,.125);
 }
 
 .overskrift-tekst {
@@ -116,6 +117,7 @@ body {
   background-color: rgba(0, 0, 0, .03);
   border-bottom: 1px solid rgba(0, 0, 0, .125);
   font-size: 24px;
+  color: #212529;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -126,6 +128,7 @@ body {
 
 .tekstboks5 {
   margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .merknapp {
@@ -168,12 +171,13 @@ body {
 .footer {
   margin-top: 0;
   margin-bottom: 16px;
+  color: #212529;
 }
 
 .scrollknapp {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 6px;
   width: 50px;
   height: 40px;
   background-color: #3097D1;
@@ -188,5 +192,8 @@ body {
 
 .scroll {
   border: 1px solid rgba(0, 0, 0, .125);
+}
 
+#bildekilde {
+  color: #212529;
 }
