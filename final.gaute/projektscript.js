@@ -108,10 +108,10 @@ function topFunction() {
 }
 
 
-var count = 1;
+var a = 1;
 function setColor(btn, color) {
     var property = document.getElementById(btn);
-    if (count == 0) {
+    if (a == 0) {
         document.body.style.backgroundColor = "#f5f8fa";
         document.getElementById("oransj").style.color = "#fff";
         document.getElementById("overskrift1").style.color = "#212529";
@@ -124,7 +124,7 @@ function setColor(btn, color) {
         document.getElementById("bildekilde").style.color = "#212529";
         
         
-        count = 1;        
+        a = 1;        
     }
     else {
         document.body.style.backgroundColor = "#343a40";
@@ -137,6 +137,38 @@ function setColor(btn, color) {
         document.getElementById("scroll").style.backgroundColor = "#ffc107";
         document.getElementById("foot").style.color = "white";
         document.getElementById("bildekilde").style.color = "white";
-        count = 0;
+        a = 0;
     }
+}
+
+function resizeText(multiplier) {
+    if (document.body.style.fontSize == "") {
+      document.body.style.fontSize = "1.0em";
+    }
+    document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+  }
+
+var g = 10;
+function setFont () {
+    if (g < 12) {
+    document.getElementById("tekst4").style.fontSize = "10px"; }
+}
+
+var f = 16;
+function setFo () { 
+    var property = document.getElementById(btn);   
+    if (f == 16) {
+        document.getElementById("tekst4").style.fontSize = "18px";
+        f = 18;
+    } else if (f == 18) {
+        document.getElementById("tekst4").style.fontSize = "20px";
+        f = 20;
+    } else if (f == 20) {
+        document.getElementById("tekst4").style.fontSize = "22px";
+        f = 22;
+    } else if (f == 22) {
+        document.getElementById("tekst4").style.fontSize = "24px";
+        f = 24;
+    } 
+    
 }
