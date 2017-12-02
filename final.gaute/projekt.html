@@ -6,24 +6,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="projektstil.css" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
     <script type="text/javascript" src="projektscript.js"></script>
 
     <!--google icons-->
-=======
     <script src="projektscript.js"></script>
->>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
+
     <style>
+    .d-none {
+      display: none;
+      font
+    }
+
+
     </style>
     <script>
+    /*
+    var x = 0;
+function change(){
+if(x % 2 == 0) {
+var z = 25;
+document.getElementById('font').style.fontSize = z + "px";
+} else {
+var y = 16;
+document.getElementById('font').style.fontSize = y + "px";
+}
+x += 1;
+return x;}
+
+        var z = 0;
+        function dro() {
+            if(z % 2 == 0){
+              var x = document.getElementById("dro-list");
+              x.style.display = "block";
+            }
+            else {
+              var x = document.getElementById("dro-list");
+              x.style.display = "none";
+            }
+
+              z += 1;
+              return counter1;
+        }
+
+
+    var counter1 = 0;
+    function InvertColor() {
+
+        if(counter1 % 2 == 0){
+          document.getElementsByTagName("nav")[0].setAttribute("class", "color-blindness1");
+          document.getElementsByTagName("a")[0].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[1].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[2].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[3].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[4].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[5].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[6].setAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[7].setAttribute("class", "color-blindness2");
+        }
+        else {
+          document.getElementsByTagName("nav")[0].removeAttribute("class", "color-blindness1");
+          document.getElementsByTagName("nav")[0].setAttribute("class", "main-nav");
+          document.getElementsByTagName("a")[0].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[1].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[2].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[3].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[4].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[5].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[6].removeAttribute("class", "color-blindness2");
+          document.getElementsByTagName("a")[7].removeAttribute("class", "color-blindness2");
+
+        }
+          counter1 += 1;
+          return counter1;
+    }
+
     function more1() {
         var a = document.getElementById("button1");
-        if (a.style.display === "none") {
-            a.style.display = "block";
+        if (a.style.display = "none") {
+          a.style.display = "block";
+
         } else {
             a.style.display = "none";
         }
@@ -31,7 +95,7 @@
 
     function more2() {
         var b = document.getElementById("button2");
-        if (b.style.display === "none") {
+        if (b.style.display = "none") {
             b.style.display = "block";
         } else {
             b.style.display = "none";
@@ -40,7 +104,7 @@
 
     function more3() {
         var b = document.getElementById("button3");
-        if (b.style.display === "none") {
+        if (b.style.display = "none") {
             b.style.display = "block";
         } else {
             b.style.display = "none";
@@ -49,14 +113,12 @@
 
     function more4() {
         var b = document.getElementById("button4");
-        if (b.style.display === "none") {
+        if (b.style.display = "none") {
             b.style.display = "block";
         } else {
             b.style.display = "none";
         }
-    }
-
-
+    }*/
     function dro() {
         var x = document.getElementById("dro-list");
         if (x.style.display === "none") {
@@ -70,28 +132,24 @@
     function InvertColor() {
 
         if(counter % 2 == 0){
-          document.getElementsByTagName("h2")[0].setAttribute("class", "color-blindness");
-          document.getElementsByTagName("h1")[0].setAttribute("class", "color-blindness");
-          document.getElementsByTagName("a")[0].setAttribute("class", "color-blindness");
+          document.getElementsByTagName("body")[0].setAttribute("class", "color-blindness");
+
         }
         else {
-          document.getElementsByTagName("h2")[0].removeAttribute("class", "color-blindness");
-          document.getElementsByTagName("h1")[0].removeAttribute("class", "color-blindness");
-          document.getElementsByTagName("a")[0].removeAttribute("class", "color-blindness");
+          document.getElementsByTagName("body")[0].removeAttribute("class", "color-blindness");
+
 
         }
           counter += 1;
           return counter;
     }
 
-    </script>
-=======
->>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
-</head>
 
+
+    </script>
+</head>
 <body>
     <header>
-<<<<<<< HEAD
       <nav id="main-nav">
         <ul>
             <li class="mainBar"><a href="#topic">Topic</a></li>
@@ -104,30 +162,7 @@
             <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
               <i class="material-icons al-m" id="color-on-icon">invert_colors</i>
               <i class="material-icons al-m d-none" id="color-off-icon" >invert_colors_off</i>
-=======
-        <div class="navbar" id="meny">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
-                aria-label="toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="sr-only">(menu button)</span>
-            </button> -->
-            <div class="knapper">
-                <a class="knapp" href="#topic">Topic</a>
-                <a class="knapp" href="#introduction">Introduction</a>
-                <a class="knapp" href="#challenge">Challenge</a>
-                <a class="knapp" href="#proposal">Our Proposal</a>
-                <a class="knapp" href="aboutus.html">About Us</a>
-                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setFont()">A</a>
-                <a role="button" class="knapp" href="#sameposition" id="decFont">a</a>
-                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
-                    <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
-                    <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
->>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
                 </a>
-<<<<<<< HEAD
-            </div>
-        </div>
-=======
             </li>
         </ul>
       </nav>
@@ -147,10 +182,35 @@
                 </a>
             </li>
         </ul>
-    <nav>
->>>>>>> 30ef804f78cdb755fbcbf10656d3054b26d5c4f0
+    </nav>
+  <!--
+    <nav class="dropdown-navbar">
+
+        <div class="navbar" id="meny">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
+                aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">(menu button)</span>
+            </button>
+            <div class="knapper">
+                <a class="knapp" href="#topic">Topic</a>
+                <a class="knapp" href="#introduction">Introduction</a>
+                <a class="knapp" href="#challenge">Challenge</a>
+                <a class="knapp" href="#proposal">Our Proposal</a>
+                <a class="knapp" href="aboutus.html">About Us</a>
+                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setFont()">A</a>
+                <a role="button" class="knapp" href="#sameposition" id="decFont">a</a>
+                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
+                    <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
+                    <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
+                </a>
+            </div>
+        </div>
+            </li>
+        </ul>
+      </nav>-->
     </header>
-    <main role="main">
+    <main role="main" id="main">
         <div class="overskrift" id="topic">
             <div class="overskrift-tekst">
                 <h1 class="overskrift-h1" id="oransj">why black labour is a worldwide issue ?</h1>
@@ -164,7 +224,9 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift1">What are taxes?</h4>
                         <div class="tekstboks4">
+                            <p class="tekstboks5" id="font">
                             <p class="tekstboks5" id="tekst1">
+
                                 Taxes are monetary contributions that citizens pay to the government. They are an important source of income to cover public
                                 expenses (Store Norske Leksikon, 2014).
                                 <span  id="button1"  class="dtext1 d-none"> These expenses are for example public health care, free education, social welfare and care
@@ -175,8 +237,7 @@
                                     according to their ability and receiving benefits by their needs. Those with a high income,
                                     which determines ability, pay more than those with a lower income.</span>
                             </p>
-
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more1()">
+                    <a class="merknapp" href="#sameposition" role="button" onclick="more1()">
                                 <span class="more1">more</span>
                                 <span class="less1 d-none">less</span>
                             </a>
@@ -193,6 +254,8 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift2">The Challenge</h4>
                         <div class="tekstboks4">
+                            <p class="tekstboks5" id="font2">
+
                             <p class="tekstboks5" id="tekst2">
                                 This fall there was a government election in Norway. As a part of the election campaigns several discussions about taxes
                                 arose. Where some parties and politicians want to cut taxes, others want to increase them.
@@ -228,7 +291,11 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift3">Our solution</h4>
                         <div class="tekstboks4">
+
+                            <p class="tekstboks5" id="font3">
+
                             <p class="tekstboks5" id="tekst3">
+
                                 We hypothesize that many don’t fully understand that the welfare society is financed through taxes, and that everyone needs
                                 to contribute in order for this to function. Countries have gone bankrupt with the lack of
                                 tax income as a contributing case/reason for this. Therefore, we want to create an educational
@@ -263,7 +330,11 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3"></h4>
                         <div class="tekstboks4">
+
+                            <p class="tekstboks5" id="font4">
+
                             <p class="tekstboks5" id="tekst4">
+
                                 Our interactive charts would help visualize the typical income and expenditures of a government and shed light on how taxes
                                 are spent. The charts would be divided into categories healthcare or transportation. Pressing
                                 these categories would animate charts with subcategories, such as healthcare research and
@@ -281,7 +352,7 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift4">Sources</h4>
                         <div class="tekstboks4">
-                            <p class="tekstboks5">
+                            <p class="tekstboks5" id="font5">
                                 <span class="dtext4 d-none" id="button4">
                                     <br>
                                     <br> Skatteetaten. (2017, 10. November). Skatt i Norge - litt om skattesystemet. Hentet 10.
@@ -319,11 +390,6 @@
         <i class="material-icons align-middle item-light">^</i>
     </button>
     </div>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
 </body>
 
 </html>

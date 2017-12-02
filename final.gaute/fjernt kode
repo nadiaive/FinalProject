@@ -1,0 +1,19 @@
+=======
+        <div class="navbar" id="meny">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
+                aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">(menu button)</span>
+            </button> -->
+            <div class="knapper">
+                <a class="knapp" href="#topic">Topic</a>
+                <a class="knapp" href="#introduction">Introduction</a>
+                <a class="knapp" href="#challenge">Challenge</a>
+                <a class="knapp" href="#proposal">Our Proposal</a>
+                <a class="knapp" href="aboutus.html">About Us</a>
+                <a class="knapp" href="#sameposition" id="incFont">A</a>
+                <a role="button" class="knapp" href="#sameposition" id="decFont">a</a>
+                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
+                    <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
+                    <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
+>>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
