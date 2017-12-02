@@ -1,44 +1,13 @@
 $(function () {
     $('#incFont').click(function () {
-        curSize = parseInt($('main').css('font-size')) + 2; 
+        curSize = parseInt($('tekstboks5').css('font-size')) + 2; 
   if (curSize <= 24)
-            $('main').css('font-size', curSize);
+            $('tekstboks5').css('font-size', curSize);
     });
     $('#decFont').click(function () {
-        curSize = parseInt($('main').css('font-size')) - 2;
+        curSize = parseInt($('tekstboks5').css('font-size')) - 2;
         if (curSize >= 16)
-            $('main').css('font-size', curSize);
-    });
-});
-
-var counter = 0;
-$(function () {
-    $("#color-blindness-button").click(function () {
-        if (counter % 2 == 0) {
-            $("div").addClass(" text-dark");
-            $("a").addClass("text-white");
-            $("h1").addClass("text-warning");
-            $("h4").addClass("text-warning");
-            $("button").addClass("bg-warning");
-            $("nav").addClass("bg-dark");
-            $("i.invert_colors").addClass("d-none");
-            $("i.invert_colors_off").removeClass("d-none");
-            $("body").addClass("bg-dark");
-            $("p.footer").addClass("text-white");
-        }
-        else {
-            $("div").removeClass(" text-light");
-            $("i.invert_colors").removeClass("d-none");
-            $("i.invert_colors_off").addClass("d-none");
-            $("nav").removeClass("bg-dark");
-            $("button").removeClass("bg-warning");
-            $("h1").removeClass("text-warning");
-            $("h4").removeClass("text-warning");
-            $("body").removeClass("bg-dark");
-            $("p.footer").removeClass("text-white");
-        }
-        counter += 1;
-        return counter;
+            $('tekstboks5').css('font-size', curSize);
     });
 });
 
@@ -127,7 +96,7 @@ window.onscroll = function () {
 }
 function scrollFunction() {
     if (document.documentElement.scrollTop > 100) { 
-        $("button.scroll-to-top").removeClass("d-none");
+        $("button.scroll-to-top").removeClass("scrollknapp");
         $("scroll-to-top").addClass("d-inline");
     } else {
         $("button.scroll-to-top").removeClass("d-inline");
@@ -138,3 +107,36 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+
+var count = 1;
+function setColor(btn, color) {
+    var property = document.getElementById(btn);
+    if (count == 0) {
+        document.body.style.backgroundColor = "#f5f8fa";
+        document.getElementById("oransj").style.color = "#fff";
+        document.getElementById("overskrift1").style.color = "#212529";
+        document.getElementById("overskrift2").style.color = "#212529";
+        document.getElementById("overskrift3").style.color = "#212529";
+        document.getElementById("overskrift4").style.color = "#212529";
+        document.getElementById("meny").style.backgroundColor = "#3097D1";
+        document.getElementById("scroll").style.backgroundColor = "#3097D1";
+        document.getElementById("foot").style.color = "#212529";
+        document.getElementById("bildekilde").style.color = "#212529";
+        
+        
+        count = 1;        
+    }
+    else {
+        document.body.style.backgroundColor = "#343a40";
+        document.getElementById("oransj").style.color = "#ffc107";
+        document.getElementById("overskrift1").style.color = "#ffc107";
+        document.getElementById("overskrift2").style.color = "#ffc107";
+        document.getElementById("overskrift3").style.color = "#ffc107";
+        document.getElementById("overskrift4").style.color = "#ffc107";
+        document.getElementById("meny").style.backgroundColor = "#343a40";
+        document.getElementById("scroll").style.backgroundColor = "#ffc107";
+        document.getElementById("foot").style.color = "white";
+        document.getElementById("bildekilde").style.color = "white";
+        count = 0;
+    }
+}
