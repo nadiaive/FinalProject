@@ -228,7 +228,7 @@ return x;}
 </head>
 <body>
     <header>
-      <nav id="main-nav">
+      <nav id="main-nav" role="navigation">
         <ul>
             <li class="mainBar"><a href="#topic">Topic</a></li>
             <li class="mainBar"><a href="#introduction">Introduction</a></li>
@@ -243,8 +243,10 @@ return x;}
             </li>
         </ul>
       </nav>
-    <nav id="dropdown-navbar">
-        <a id="dro-btn"  onclick="dro()"><i class="material-icons al-m">line_weight</i></a>
+    <nav id="dropdown-navbar" role="navigation">
+        <a id="dro-btn"  onclick="dro()" data-target="#dro-list" aria-expanded="false" aria-controls="dro-list" aria-label="toggle dro-list">
+          <i class="material-icons al-m">line_weight</i>
+        </a>
         <ul id="dro-list">
             <li class="droBar col-"><a href="#topic">Topic</a></li>
             <li class="droBar col-"><a href="#introduction">Introduction</a></li>
@@ -313,7 +315,7 @@ return x;}
                                     according to their ability and receiving benefits by their needs. Those with a high income,
                                     which determines ability, pay more than those with a lower income.</span>
                             </p>
-                    <a class="merknapp" href="#sameposition" role="button" onclick="more1()">
+                    <a class="merknapp" href="javascript:void(0)" role="button" onclick="more1()">
                                 <span id="more1">more</span>
                             </a>
                         </div>
@@ -353,7 +355,7 @@ return x;}
                                     put our children through school or every time we needed to see the doctor. Furthermore,
                                     there seems to be little awareness of the consequences of black labor, both for the individual
                                     worker and for the society as a whole (Steen, 2016).</p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more2()">
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more2()">
                                 <span id="more2">more</span>
                             </a>
                         </div>
@@ -385,7 +387,7 @@ return x;}
                                     income between different posts. Furthermore, we hope that this tool will increase understanding
                                     of why it is necessary to pay taxes, and perhaps create a stronger incentive to do so.
                             </p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more3()">
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more3()">
                                 <span id="more3">more</span>
                             </a>
                         </div>
@@ -444,7 +446,7 @@ return x;}
                                     <br>
                                     <Br>
                             </p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more4()">
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more4()">
                                 <span id="more4">more</span>
                             </a>
                         </div>
@@ -458,7 +460,6 @@ return x;}
         <p class="footer" id="foot">Final Project</p>
     </footer>
     <button onclick="topFunction()" type="button" class="scrollknapp" id="scroll">
-       <!-- <span class="scroll">(scroll to top button)</span> -->
         <i class="material-icons align-middle item-light">^</i>
     </button>
     </div>
