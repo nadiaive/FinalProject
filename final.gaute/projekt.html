@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
 
     <style>
+
     .d-none {
       display: none;
-      font
     }
 
 
@@ -119,13 +119,20 @@ return x;}
             b.style.display = "none";
         }
     }*/
+
+    var y = 0;
     function dro() {
-        var x = document.getElementById("dro-list");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        if(y % 2 == 0){
+          var x = document.getElementById("dro-list");
+          x.style.display = "block";
         }
+        else {
+          var x = document.getElementById("dro-list");
+          x.style.display = "none";
+        }
+
+          y += 1;
+          return y;
     }
 
     var counter = 0;
