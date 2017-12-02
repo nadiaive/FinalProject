@@ -1,4 +1,4 @@
-body {
+/*body {
   padding-top: 58px;
   background-color: #f5f8fa;
   font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,7 +12,9 @@ body {
   display: block;
 
 }
+*/
 
+/*
 .navbar {
   height: 58px;
   align-items: center;
@@ -24,6 +26,7 @@ body {
   left: 0;
   z-index: 10
 }
+*/
 
 .knapp {
   text-decoration: none;
@@ -60,7 +63,7 @@ body {
   box-sizing: border-box;
   display: block;
   font-size: 16px;
-  
+
 }
 
 .overskrift-h1 {
@@ -74,8 +77,8 @@ body {
 
 .overskrift-p {
   margin-top: 0;
-  
-  
+
+
 }
 
 .overskrift-bilde {
@@ -171,6 +174,139 @@ body {
 .footer {
   margin-top: 0;
   margin-bottom: 16px;
+<<<<<<< HEAD
+}
+
+/*-----*/
+html {
+  font-family:  Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  background-color: #f5f8fa;
+  padding-top: 51px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.al-m {
+vertical-align: middle;
+}
+ .d-none {
+   display: none;
+ }
+
+
+ .d-block {
+   display: block;
+ }
+
+ .d-inline {
+   display: inline;
+ }
+
+ .d-inline-block {
+   display: inline-block;
+ }
+
+ .row::after {
+     content: "";
+     clear: both;
+     display: table;
+ }
+
+ [class*="col-"] {
+     float: left;
+ }
+
+ .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+ .col-4 {width: 33.33%;}
+ .col-5 {width: 41.66%;}
+ .col-6 {width: 50%;}
+ .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+ .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;}
+
+ @media only screen and (max-width: 1024px) { /*under 800px*/
+   [class*="col-"] {
+       width: 100%;
+   }
+ #main-nav {
+ display: none;
+ }
+ }
+
+ @media only screen and (min-width: 1024px) { /*over 800px*/
+   #dropdown-navbar {
+     display: none;
+   }
+ }
+
+ nav#main-nav  {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     background-color: #3097D1;
+     text-align: center;
+ }
+
+ .mainBar a {
+   text-decoration: none;
+   padding: 20px 10px;
+ }
+
+ a {
+   color: white;
+ }
+
+ li {
+     display: inline;
+ }
+
+ li a:hover{
+     background-color: #868e96;
+ }
+
+ nav#dropdown-navbar {
+   padding-bottom: 27px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #3097D1;
+   text-align: center;
+   z-index: 1;
+ }
+
+ a#dro-btn {
+   position: relative;
+   top: 12px;
+   cursor: pointer;
+ }
+
+ .droBar a {
+   text-decoration: none;
+   padding: 20px 10px;
+   display: block;
+ }
+
+ ul#dro-list {
+     display:none;
+     margin: 15px 0px;
+     padding: 0;
+ }
+
+ 
+=======
   color: #212529;
 }
 
@@ -197,3 +333,4 @@ body {
 #bildekilde {
   color: #212529;
 }
+>>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
