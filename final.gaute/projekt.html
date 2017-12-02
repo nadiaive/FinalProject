@@ -23,6 +23,7 @@
 
     </style>
     <script>
+    /*
     var x = 0;
 function change(){
 if(x % 2 == 0) {
@@ -117,37 +118,80 @@ return x;}
         } else {
             b.style.display = "none";
         }
+    }*/
+    function dro() {
+        var x = document.getElementById("dro-list");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
+
+    var counter = 0;
+    function InvertColor() {
+
+        if(counter % 2 == 0){
+          document.getElementsByTagName("body")[0].setAttribute("class", "color-blindness");
+
+        }
+        else {
+          document.getElementsByTagName("body")[0].removeAttribute("class", "color-blindness");
+
+
+        }
+          counter += 1;
+          return counter;
+    }
+
+
 
     </script>
 </head>
 <body>
     <header>
-      <nav class="main-nav">
+      <nav id="main-nav">
         <ul>
             <li class="mainBar"><a href="#topic">Topic</a></li>
             <li class="mainBar"><a href="#introduction">Introduction</a></li>
             <li class="mainBar"><a href="#challenge">Challenge</a></li>
             <li class="mainBar"><a href="#proposal">Our Proposal</a></li>
             <li class="mainBar"><a href="#aboutus">About us</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" onclick="change()" id="incFont" role="button"><i class="material-icons al-m">format_size</i></a></li>
+            <li class="mainBar"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button">A</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" id="decFont" role="button">a</a></li>
             <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
               <i class="material-icons al-m" id="color-on-icon">invert_colors</i>
               <i class="material-icons al-m d-none" id="color-off-icon" >invert_colors_off</i>
-<<<<<<< HEAD
-            </a>
-        </li>
-    </ul>
-  </nav>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    <nav id="dropdown-navbar">
+        <a id="dro-btn"  onclick="dro()"><i class="material-icons al-m">line_weight</i></a>
+        <ul id="dro-list">
+            <li class="droBar col-"><a href="#topic">Topic</a></li>
+            <li class="droBar col-"><a href="#introduction">Introduction</a></li>
+            <li class="droBar col-"><a href="#challenge">Challenge</a></li>
+            <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
+            <li class="droBar col-"><a href="#aboutus">About us</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button">A</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" id="decFont" role="button">a</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="color-on-off()" id="color-blindness-button" role="button">
+              <i class="material-icons color-on al-m">invert_colors</i>
+              <i class="material-icons color-off al-m d-none">invert_colors_off</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+  <!--
     <nav class="dropdown-navbar">
-=======
-=======
+
         <div class="navbar" id="meny">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
                 aria-label="toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <span class="sr-only">(menu button)</span>
-            </button> -->
+            </button>
             <div class="knapper">
                 <a class="knapp" href="#topic">Topic</a>
                 <a class="knapp" href="#introduction">Introduction</a>
@@ -159,37 +203,12 @@ return x;}
                 <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
                     <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
                     <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
->>>>>>> 0057f231b31735cb0b925a20214fb67543b2ad38
                 </a>
-<<<<<<< HEAD
             </div>
         </div>
-=======
             </li>
         </ul>
-      </nav>
-    <nav id="dropdown-navbar">
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
-        <a id="dro-btn"  onclick="dro()"><i class="material-icons al-m">line_weight</i></a>
-        <ul id="dro-list">
-            <li class="droBar col-"><a href="#topic">Topic</a></li>
-            <li class="droBar col-"><a href="#introduction">Introduction</a></li>
-            <li class="droBar col-"><a href="#challenge">Challenge</a></li>
-            <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
-            <li class="droBar col-"><a href="#aboutus">About us</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" id="incFont" role="button"><i class="material-icons al-m">format_size</i></a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" onclick="DroInvertColor()" id="color-blindness-button" role="button">
-              <i class="material-icons color-on al-m">invert_colors</i>
-              <i class="material-icons color-off al-m d-none">invert_colors_off</i>
-                </a>
-            </li>
-        </ul>
-<<<<<<< HEAD
-    </nav>
-=======
-    <nav>
->>>>>>> 30ef804f78cdb755fbcbf10656d3054b26d5c4f0
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
+      </nav>-->
     </header>
     <main role="main" id="main">
         <div class="overskrift" id="topic">
@@ -205,11 +224,9 @@ return x;}
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift1">What are taxes?</h4>
                         <div class="tekstboks4">
-<<<<<<< HEAD
                             <p class="tekstboks5" id="font">
-=======
                             <p class="tekstboks5" id="tekst1">
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
+
                                 Taxes are monetary contributions that citizens pay to the government. They are an important source of income to cover public
                                 expenses (Store Norske Leksikon, 2014).
                                 <span  id="button1"  class="dtext1 d-none"> These expenses are for example public health care, free education, social welfare and care
@@ -237,11 +254,9 @@ return x;}
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift2">The Challenge</h4>
                         <div class="tekstboks4">
-<<<<<<< HEAD
                             <p class="tekstboks5" id="font2">
-=======
+
                             <p class="tekstboks5" id="tekst2">
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
                                 This fall there was a government election in Norway. As a part of the election campaigns several discussions about taxes
                                 arose. Where some parties and politicians want to cut taxes, others want to increase them.
                                 <br>A few weeks later, the national budget was presented to the public. The national budget is
@@ -276,11 +291,11 @@ return x;}
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift3">Our solution</h4>
                         <div class="tekstboks4">
-<<<<<<< HEAD
+
                             <p class="tekstboks5" id="font3">
-=======
+
                             <p class="tekstboks5" id="tekst3">
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
+
                                 We hypothesize that many don’t fully understand that the welfare society is financed through taxes, and that everyone needs
                                 to contribute in order for this to function. Countries have gone bankrupt with the lack of
                                 tax income as a contributing case/reason for this. Therefore, we want to create an educational
@@ -315,11 +330,11 @@ return x;}
                     <div class="tekstboks2">
                         <h4 class="tekstboks3"></h4>
                         <div class="tekstboks4">
-<<<<<<< HEAD
+
                             <p class="tekstboks5" id="font4">
-=======
+
                             <p class="tekstboks5" id="tekst4">
->>>>>>> d3006905e7f8e3b26de7cfa1829874308a6096ba
+
                                 Our interactive charts would help visualize the typical income and expenditures of a government and shed light on how taxes
                                 are spent. The charts would be divided into categories healthcare or transportation. Pressing
                                 these categories would animate charts with subcategories, such as healthcare research and
