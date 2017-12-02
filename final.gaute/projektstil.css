@@ -325,7 +325,7 @@ vertical-align: middle;
 
 .scrollknapp {
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   right: 6px;
   width: 50px;
   height: 40px;
@@ -337,10 +337,6 @@ vertical-align: middle;
   font-style: normal;
   font-size: 20px;
   font-family: 'Material Icons';
-}
-
-.scroll {
-  border: 1px solid rgba(0, 0, 0, .125);
 }
 
 #bildekilde {
