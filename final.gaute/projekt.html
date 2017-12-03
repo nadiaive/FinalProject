@@ -23,102 +23,6 @@
 
     </style>
     <script>
-    /*
-    var x = 0;
-function change(){
-if(x % 2 == 0) {
-var z = 25;
-document.getElementById('font').style.fontSize = z + "px";
-} else {
-var y = 16;
-document.getElementById('font').style.fontSize = y + "px";
-}
-x += 1;
-return x;}
-
-        var z = 0;
-        function dro() {
-            if(z % 2 == 0){
-              var x = document.getElementById("dro-list");
-              x.style.display = "block";
-            }
-            else {
-              var x = document.getElementById("dro-list");
-              x.style.display = "none";
-            }
-
-              z += 1;
-              return counter1;
-        }
-
-
-    var counter1 = 0;
-    function InvertColor() {
-
-        if(counter1 % 2 == 0){
-          document.getElementsByTagName("nav")[0].setAttribute("class", "color-blindness1");
-          document.getElementsByTagName("a")[0].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[1].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[2].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[3].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[4].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[5].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[6].setAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[7].setAttribute("class", "color-blindness2");
-        }
-        else {
-          document.getElementsByTagName("nav")[0].removeAttribute("class", "color-blindness1");
-          document.getElementsByTagName("nav")[0].setAttribute("class", "main-nav");
-          document.getElementsByTagName("a")[0].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[1].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[2].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[3].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[4].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[5].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[6].removeAttribute("class", "color-blindness2");
-          document.getElementsByTagName("a")[7].removeAttribute("class", "color-blindness2");
-
-        }
-          counter1 += 1;
-          return counter1;
-    }
-
-    function more1() {
-        var a = document.getElementById("button1");
-        if (a.style.display = "none") {
-          a.style.display = "block";
-
-        } else {
-            a.style.display = "none";
-        }
-    }
-
-    function more2() {
-        var b = document.getElementById("button2");
-        if (b.style.display = "none") {
-            b.style.display = "block";
-        } else {
-            b.style.display = "none";
-        }
-    }
-
-    function more3() {
-        var b = document.getElementById("button3");
-        if (b.style.display = "none") {
-            b.style.display = "block";
-        } else {
-            b.style.display = "none";
-        }
-    }
-
-    function more4() {
-        var b = document.getElementById("button4");
-        if (b.style.display = "none") {
-            b.style.display = "block";
-        } else {
-            b.style.display = "none";
-        }
-    }*/
 
         var a = 0;
         function more1() {
@@ -332,8 +236,8 @@ return x;}
             <li class="droBar col-"><a href="#challenge">Challenge</a></li>
             <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
             <li class="droBar col-"><a href="#aboutus">About us</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" id="incFont" role="button">A</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" id="DecFont" role="button">a</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a></li>
             <li class="droBar col-"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
               <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
               <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
@@ -341,32 +245,6 @@ return x;}
             </li>
         </ul>
     </nav>
-  <!--
-    <nav class="dropdown-navbar">
-
-        <div class="navbar" id="meny">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
-                aria-label="toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="sr-only">(menu button)</span>
-            </button>
-            <div class="knapper">
-                <a class="knapp" href="#topic">Topic</a>
-                <a class="knapp" href="#introduction">Introduction</a>
-                <a class="knapp" href="#challenge">Challenge</a>
-                <a class="knapp" href="#proposal">Our Proposal</a>
-                <a class="knapp" href="aboutus.html">About Us</a>
-                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setFont()">A</a>
-                <a role="button" class="knapp" href="#sameposition" id="decFont">a</a>
-                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
-                    <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
-                    <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
-                </a>
-            </div>
-        </div>
-            </li>
-        </ul>
-      </nav>-->
     </header>
     <main role="main" id="main">
         <div class="overskrift" id="topic">
