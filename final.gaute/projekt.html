@@ -267,6 +267,17 @@ return x;}
     function scrollUp() {
         document.documentElement.scrollTop = 0;
     }
+
+window.onscroll = function() {ScrollUp()};
+function ScrollUp() {
+    if (document.documentElement.scrollTop < 300) {
+      var v =  document.getElementById("scrollUp");
+      v.style.display = "none";
+    } else {
+      var w =  document.getElementById("scrollUp");
+      w.style.display = "block"
+    }
+}
     </script>
 </head>
 <body>
@@ -503,7 +514,7 @@ return x;}
     <footer class="container">
         <hr class="linje">
         <p class="footer" id="foot">Final Project</p>
-        <button class="scrollUp" onclick="scrollUp()" type="button"><i class="material-icons">keyboard_arrow_up</i></button>
+        <button id="scrollUp" onclick="scrollUp()" type="button"><i class="material-icons">keyboard_arrow_up</i></button>
     </footer>
     <!--<button onclick="topFunction()" type="button" class="scrollknapp" id="scroll">
         <i class="material-icons align-middle item-light">^</i>
