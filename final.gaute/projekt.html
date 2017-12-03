@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
 
     <style>
+
     .d-none {
       display: none;
-      font
     }
 
 
@@ -119,29 +119,150 @@ return x;}
             b.style.display = "none";
         }
     }*/
-    function dro() {
-        var x = document.getElementById("dro-list");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+
+        var a = 0;
+        function more1() {
+            if(a % 2 == 0){
+              var b = document.getElementById("button1");
+              b.style.display = "block";
+              document.getElementById("more1").innerHTML = "Less";
+            }
+            else {
+              var b = document.getElementById("button1");
+              b.style.display = "none";
+              document.getElementById("more1").innerHTML = "more";
+
+            }
+
+              a += 1;
+              return y;
         }
-    }
 
-    var counter = 0;
-    function InvertColor() {
+        var c = 0;
+        function more2() {
+            if(c % 2 == 0){
+              var d = document.getElementById("button2");
+              d.style.display = "block";
+              document.getElementById("more2").innerHTML = "Less";
+            }
+            else {
+              var d = document.getElementById("button2");
+              d.style.display = "none";
+              document.getElementById("more2").innerHTML = "more";
 
-        if(counter % 2 == 0){
-          document.getElementsByTagName("body")[0].setAttribute("class", "color-blindness");
+            }
 
+              c += 1;
+              return c;
+        }
+
+        var e = 0;
+        function more3() {
+            if(e % 2 == 0){
+              var f = document.getElementById("button3");
+              f.style.display = "block";
+              document.getElementById("more3").innerHTML = "Less";
+            }
+            else {
+              var f = document.getElementById("button3");
+              f.style.display = "none";
+              document.getElementById("more3").innerHTML = "more";
+
+            }
+
+              e += 1;
+              return e;
+        }
+
+        var g = 0;
+        function more4() {
+            if(g % 2 == 0){
+              var h = document.getElementById("button4");
+              h.style.display = "block";
+              document.getElementById("more4").innerHTML = "Less";
+            }
+            else {
+              var h = document.getElementById("button4");
+              h.style.display = "none";
+              document.getElementById("more4").innerHTML = "more";
+
+            }
+
+              g += 1;
+              return g;
+        }
+
+    var h = 0;
+    function dro() {
+        if(h % 2 == 0){
+          var i = document.getElementById("dro-list");
+          i.style.display = "block";
         }
         else {
-          document.getElementsByTagName("body")[0].removeAttribute("class", "color-blindness");
-
-
+          var i = document.getElementById("dro-list");
+          i.style.display = "none";
         }
-          counter += 1;
-          return counter;
+
+          h += 1;
+          return h;
+    }
+
+    var j = 0;
+    function InvertColor() {
+        if(j % 2 == 0){
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#343a40";
+          n.style.backgroundColor = "#343a40";
+          r.style.display = "none";
+          s.style.display = "inline";
+          t.style.display = "none";
+          u.style.display = "inline";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          for(m=0; m<20; m++){l[m].style.color = "yellow";}
+          l[16].style.backgroundColor = "#343a40"
+          for(p=0; p<5; p++){
+            o[p].style.color = "yellow";
+            o[p].style.backgroundColor = "#343a40";
+          }
+          q[0].style.color = "yellow";
+        }
+        else {
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#3097D1";
+          n.style.backgroundColor = "#3097D1";
+          r.style.display = "inline";
+          s.style.display = "none";
+          t.style.display = "inline";
+          u.style.display = "none";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          for(m=0; m<20; m++){l[m].style.color = "white";}
+          l[16].style.color = "#212529";
+          l[16].style.backgroundColor = null;
+          for(p=0; p<5; p++){
+            o[p].style.color = "#343a40";
+            o[p].style.backgroundColor = "rgba(0, 0, 0, .03)"
+          }
+          q[0].style.color = "white";
+        }
+
+          j += 1;
+          return j;
     }
 
 
@@ -150,29 +271,31 @@ return x;}
 </head>
 <body>
     <header>
-      <nav id="main-nav">
+      <nav id="main-nav" role="navigation">
         <ul>
             <li class="mainBar"><a href="#topic">Topic</a></li>
             <li class="mainBar"><a href="#introduction">Introduction</a></li>
             <li class="mainBar"><a href="#challenge">Challenge</a></li>
             <li class="mainBar"><a href="#proposal">Our Proposal</a></li>
-            <li class="mainBar"><a href="#aboutus">About us</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button">A</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" id="decFont" role="button">a</a></li>
+            <li class="mainBar"><a href="aboutus.html">About us</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button"><i class="material-icons al-m">format_size</i></a></li>
             <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
-              <i class="material-icons al-m" id="color-on-icon">invert_colors</i>
-              <i class="material-icons al-m d-none" id="color-off-icon" >invert_colors_off</i>
+              <i class="material-icons al-m" id="icon-on">invert_colors</i>
+              <i class="material-icons al-m d-none" id="icon-off" >invert_colors_off</i>
                 </a>
             </li>
         </ul>
       </nav>
-    <nav id="dropdown-navbar">
-        <a id="dro-btn"  onclick="dro()"><i class="material-icons al-m">line_weight</i></a>
+    <nav id="dropdown-navbar" role="navigation">
+        <a id="dro-btn"  onclick="dro()" data-target="#dro-list" aria-expanded="false" aria-controls="dro-list" aria-label="toggle dro-list">
+          <i class="material-icons al-m">line_weight</i>
+        </a>
         <ul id="dro-list">
             <li class="droBar col-"><a href="#topic">Topic</a></li>
             <li class="droBar col-"><a href="#introduction">Introduction</a></li>
             <li class="droBar col-"><a href="#challenge">Challenge</a></li>
             <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
+<<<<<<< HEAD
             <li class="droBar col-"><a href="#aboutus">About us</a></li>
             <li class="droBar col-"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button">A</a></li>
             <li class="droBar col-"><a href="javascript:void(0)" id="decFont" role="button">a</a></li>
@@ -180,6 +303,13 @@ return x;}
             <li class="droBar col-"><a href="javascript:void(0)" id="color-blindness-button" role="button" onclick="setColor('button', '#101010')";>
               <i class="material-icons color-on al-m">invert_colors</i>
               <i class="material-icons color-off al-m d-none">invert_colors_off</i>
+=======
+            <li class="droBar col-"><a href="aboutus.html">About us</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button"><i class="material-icons">format_size</i></a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+              <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
+              <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
+>>>>>>> 10142657bbbcde7f0c150c000db3a5dc39a11c47
                 </a>
             </li>
         </ul>
@@ -215,7 +345,7 @@ return x;}
         <div class="overskrift" id="topic">
             <div class="overskrift-tekst">
                 <h1 class="overskrift-h1" id="oransj">why black labour is a worldwide issue ?</h1>
-                <p class="overskrift-p">we present, discuss and find solution with our interactive website.</p>
+                <p class="overskrift-p" id="h5">we present, discuss and find solution with our interactive website.</p>
             </div>
             <img class="overskrift-bilde" src="logo.png" alt="logo a pie chart divided into four pieces with four different colors and sizes">
         </div>
@@ -238,9 +368,8 @@ return x;}
                                     according to their ability and receiving benefits by their needs. Those with a high income,
                                     which determines ability, pay more than those with a lower income.</span>
                             </p>
-                    <a class="merknapp" href="#sameposition" role="button" onclick="more1()">
-                                <span class="more1">more</span>
-                                <span class="less1 d-none">less</span>
+                    <a class="merknapp" href="javascript:void(0)" role="button" onclick="more1()">
+                                <span id="more1">more</span>
                             </a>
                         </div>
                     </div>
@@ -279,9 +408,8 @@ return x;}
                                     put our children through school or every time we needed to see the doctor. Furthermore,
                                     there seems to be little awareness of the consequences of black labor, both for the individual
                                     worker and for the society as a whole (Steen, 2016).</p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more2()">
-                                <span class="more2">more</span>
-                                <span class="less2 d-none">less</span>
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more2()">
+                                <span id="more2">more</span>
                             </a>
                         </div>
                     </div>
@@ -312,9 +440,8 @@ return x;}
                                     income between different posts. Furthermore, we hope that this tool will increase understanding
                                     of why it is necessary to pay taxes, and perhaps create a stronger incentive to do so.
                             </p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more3()">
-                                <span class="more3">more</span>
-                                <span class="less3">less</span>
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more3()">
+                                <span id="more3">more</span>
                             </a>
                         </div>
                     </div>
@@ -372,9 +499,8 @@ return x;}
                                     <br>
                                     <Br>
                             </p>
-                            <a class="merknapp" href="#sameposition" role="button" onclick="more4()">
-                                <span class="more4">more</span>
-                                <span class="less4 d-none">less</span>
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more4()">
+                                <span id="more4">more</span>
                             </a>
                         </div>
                     </div>
@@ -387,7 +513,6 @@ return x;}
         <p class="footer" id="foot">Final Project</p>
     </footer>
     <button onclick="topFunction()" type="button" class="scrollknapp" id="scroll">
-       <!-- <span class="scroll">(scroll to top button)</span> -->
         <i class="material-icons align-middle item-light">^</i>
     </button>
     </div>
