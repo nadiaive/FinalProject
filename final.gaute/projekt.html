@@ -192,37 +192,80 @@ return x;}
               return g;
         }
 
-    var y = 0;
+    var h = 0;
     function dro() {
-        if(y % 2 == 0){
-          var z = document.getElementById("dro-list");
-          z.style.display = "block";
+        if(h % 2 == 0){
+          var i = document.getElementById("dro-list");
+          i.style.display = "block";
         }
         else {
-          var z = document.getElementById("dro-list");
-          z.style.display = "none";
+          var i = document.getElementById("dro-list");
+          i.style.display = "none";
         }
 
-          y += 1;
-          return y;
+          h += 1;
+          return h;
     }
 
-
-    var counter = 0;
+    var j = 0;
     function InvertColor() {
-
-        if(counter % 2 == 0){
-          document.getElementsByTagName("body")[0].setAttribute("class", "color-blindness");
-
+        if(j % 2 == 0){
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#343a40";
+          n.style.backgroundColor = "#343a40";
+          r.style.display = "none";
+          s.style.display = "inline";
+          t.style.display = "none";
+          u.style.display = "inline";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          for(m=0; m<20; m++){l[m].style.color = "yellow";}
+          l[16].style.backgroundColor = "#343a40"
+          for(p=0; p<5; p++){
+            o[p].style.color = "yellow";
+            o[p].style.backgroundColor = "#343a40";
+          }
+          q[0].style.color = "yellow";
         }
         else {
-          document.getElementsByTagName("body")[0].removeAttribute("class", "color-blindness");
-
-
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#3097D1";
+          n.style.backgroundColor = "#3097D1";
+          r.style.display = "inline";
+          s.style.display = "none";
+          t.style.display = "inline";
+          u.style.display = "none";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          for(m=0; m<20; m++){l[m].style.color = "white";}
+          l[16].style.color = "#212529";
+          l[16].style.backgroundColor = null;
+          for(p=0; p<5; p++){
+            o[p].style.color = "#343a40";
+            o[p].style.backgroundColor = "rgba(0, 0, 0, .03)"
+          }
+          q[0].style.color = "white";
         }
-          counter += 1;
-          return counter;
+
+          j += 1;
+          return j;
     }
+
+
 
     </script>
 </head>
@@ -237,8 +280,8 @@ return x;}
             <li class="mainBar"><a href="aboutus.html">About us</a></li>
             <li class="mainBar"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button"><i class="material-icons al-m">format_size</i></a></li>
             <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
-              <i class="material-icons al-m" id="color-on-icon">invert_colors</i>
-              <i class="material-icons al-m d-none" id="color-off-icon" >invert_colors_off</i>
+              <i class="material-icons al-m" id="icon-on">invert_colors</i>
+              <i class="material-icons al-m d-none" id="icon-off" >invert_colors_off</i>
                 </a>
             </li>
         </ul>
@@ -254,9 +297,9 @@ return x;}
             <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
             <li class="droBar col-"><a href="aboutus.html">About us</a></li>
             <li class="droBar col-"><a href="javascript:void(0)" onclick="IncFontSize()" id="incFont" role="button"><i class="material-icons">format_size</i></a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" onclick="color-on-off()" id="color-blindness-button" role="button">
-              <i class="material-icons color-on al-m">invert_colors</i>
-              <i class="material-icons color-off al-m d-none">invert_colors_off</i>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+              <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
+              <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
                 </a>
             </li>
         </ul>
@@ -292,7 +335,7 @@ return x;}
         <div class="overskrift" id="topic">
             <div class="overskrift-tekst">
                 <h1 class="overskrift-h1" id="oransj">why black labour is a worldwide issue ?</h1>
-                <p class="overskrift-p">we present, discuss and find solution with our interactive website.</p>
+                <p class="overskrift-p" id="h5">we present, discuss and find solution with our interactive website.</p>
             </div>
             <img class="overskrift-bilde" src="logo.png" alt="logo a pie chart divided into four pieces with four different colors and sizes">
         </div>
