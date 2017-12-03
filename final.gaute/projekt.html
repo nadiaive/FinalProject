@@ -15,236 +15,264 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600" rel="stylesheet" type="text/css">
 
     <style>
-
-    .d-none {
-      display: none;
-    }
-
-
+        .d-none {
+            display: none;
+        }
     </style>
     <script>
 
         var a = 0;
         function more1() {
-            if(a % 2 == 0){
-              var b = document.getElementById("button1");
-              b.style.display = "block";
-              document.getElementById("more1").innerHTML = "Less";
+            if (a % 2 == 0) {
+                var b = document.getElementById("button1");
+                b.style.display = "block";
+                document.getElementById("more1").innerHTML = "Less";
             }
             else {
-              var b = document.getElementById("button1");
-              b.style.display = "none";
-              document.getElementById("more1").innerHTML = "more";
+                var b = document.getElementById("button1");
+                b.style.display = "none";
+                document.getElementById("more1").innerHTML = "more";
 
             }
 
-              a += 1;
-              return y;
+            a += 1;
+            return y;
         }
 
         var c = 0;
         function more2() {
-            if(c % 2 == 0){
-              var d = document.getElementById("button2");
-              d.style.display = "block";
-              document.getElementById("more2").innerHTML = "Less";
+            if (c % 2 == 0) {
+                var d = document.getElementById("button2");
+                d.style.display = "block";
+                document.getElementById("more2").innerHTML = "Less";
             }
             else {
-              var d = document.getElementById("button2");
-              d.style.display = "none";
-              document.getElementById("more2").innerHTML = "more";
+                var d = document.getElementById("button2");
+                d.style.display = "none";
+                document.getElementById("more2").innerHTML = "more";
 
             }
 
-              c += 1;
-              return c;
+            c += 1;
+            return c;
         }
 
         var e = 0;
         function more3() {
-            if(e % 2 == 0){
-              var f = document.getElementById("button3");
-              f.style.display = "block";
-              document.getElementById("more3").innerHTML = "Less";
+            if (e % 2 == 0) {
+                var f = document.getElementById("button3");
+                f.style.display = "block";
+                document.getElementById("more3").innerHTML = "Less";
             }
             else {
-              var f = document.getElementById("button3");
-              f.style.display = "none";
-              document.getElementById("more3").innerHTML = "more";
+                var f = document.getElementById("button3");
+                f.style.display = "none";
+                document.getElementById("more3").innerHTML = "more";
 
             }
 
-              e += 1;
-              return e;
+            e += 1;
+            return e;
         }
 
         var g = 0;
         function more4() {
-            if(g % 2 == 0){
-              var h = document.getElementById("button4");
-              h.style.display = "block";
-              document.getElementById("more4").innerHTML = "Less";
+            if (g % 2 == 0) {
+                var h = document.getElementById("button4");
+                h.style.display = "block";
+                document.getElementById("more4").innerHTML = "Less";
             }
             else {
-              var h = document.getElementById("button4");
-              h.style.display = "none";
-              document.getElementById("more4").innerHTML = "more";
+                var h = document.getElementById("button4");
+                h.style.display = "none";
+                document.getElementById("more4").innerHTML = "more";
 
             }
 
-              g += 1;
-              return g;
+            g += 1;
+            return g;
         }
 
-    var h = 0;
-    function dro() {
-        if(h % 2 == 0){
-          var i = document.getElementById("dro-list");
-          i.style.display = "block";
-        }
-        else {
-          var i = document.getElementById("dro-list");
-          i.style.display = "none";
+        var h = 0;
+        function dro() {
+            if (h % 2 == 0) {
+                var i = document.getElementById("dro-list");
+                i.style.display = "block";
+            }
+            else {
+                var i = document.getElementById("dro-list");
+                i.style.display = "none";
+            }
+
+            h += 1;
+            return h;
         }
 
-          h += 1;
-          return h;
-    }
+        var j = 0;
+        function InvertColor() {
+            if (j % 2 == 0) {
+                var k = document.getElementById("main-nav");
+                var n = document.getElementById("dropdown-navbar");
+                var r = document.getElementById("icon-on");
+                var s = document.getElementById("icon-off");
+                var t = document.getElementById("dro-icon-on");
+                var u = document.getElementById("dro-icon-off");
+                k.style.backgroundColor = "#343a40";
+                n.style.backgroundColor = "#343a40";
+                r.style.display = "none";
+                s.style.display = "inline";
+                t.style.display = "none";
+                u.style.display = "block";
+                var l = document.getElementsByTagName("a");
+                var o = document.getElementsByTagName("h4");
+                var q = document.getElementsByTagName("h1");
+                var t = document.getElementById("dro-icon-on");
+                var u = document.getElementById("dro-icon-off");
+                for (m = 0; m < 20; m++) { l[m].style.color = "yellow"; }
+                l[16].style.backgroundColor = "#343a40"
+                for (p = 0; p < 5; p++) {
+                    o[p].style.color = "yellow";
+                    o[p].style.backgroundColor = "#343a40";
+                }
+                q[0].style.color = "yellow";
+            }
+            else {
+                var k = document.getElementById("main-nav");
+                var n = document.getElementById("dropdown-navbar");
+                var r = document.getElementById("icon-on");
+                var s = document.getElementById("icon-off");
+                var t = document.getElementById("dro-icon-on");
+                var u = document.getElementById("dro-icon-off");
+                k.style.backgroundColor = "#3097D1";
+                n.style.backgroundColor = "#3097D1";
+                r.style.display = "inline";
+                s.style.display = "none";
+                t.style.display = "inline";
+                t.style.color = "white";
+                u.style.display = "none";
+                var l = document.getElementsByTagName("a");
+                var o = document.getElementsByTagName("h4");
+                var q = document.getElementsByTagName("h1");
+                for (m = 0; m < 20; m++) { l[m].style.color = "white"; }
+                l[16].style.color = "#212529";
+                l[16].style.backgroundColor = null;
+                for (p = 0; p < 5; p++) {
+                    o[p].style.color = "#343a40";
+                    o[p].style.backgroundColor = "rgba(0, 0, 0, .03)"
+                }
+                q[0].style.color = "white";
+            }
 
-    var j = 0;
-    function InvertColor() {
-        if(j % 2 == 0){
-          var k = document.getElementById("main-nav");
-          var n = document.getElementById("dropdown-navbar");
-          var r = document.getElementById("icon-on");
-          var s = document.getElementById("icon-off");
-          var t = document.getElementById("dro-icon-on");
-          var u = document.getElementById("dro-icon-off");
-          k.style.backgroundColor = "#343a40";
-          n.style.backgroundColor = "#343a40";
-          r.style.display = "none";
-          s.style.display = "inline";
-          t.style.display = "none";
-          u.style.display = "block";
-          var l = document.getElementsByTagName("a");
-          var o = document.getElementsByTagName("h4");
-          var q = document.getElementsByTagName("h1");
-          var t = document.getElementById("dro-icon-on");
-          var u = document.getElementById("dro-icon-off");
-          for(m=0; m<20; m++){l[m].style.color = "yellow";}
-          l[16].style.backgroundColor = "#343a40"
-          for(p=0; p<5; p++){
-            o[p].style.color = "yellow";
-            o[p].style.backgroundColor = "#343a40";
-          }
-          q[0].style.color = "yellow";
-        }
-        else {
-          var k = document.getElementById("main-nav");
-          var n = document.getElementById("dropdown-navbar");
-          var r = document.getElementById("icon-on");
-          var s = document.getElementById("icon-off");
-          var t = document.getElementById("dro-icon-on");
-          var u = document.getElementById("dro-icon-off");
-          k.style.backgroundColor = "#3097D1";
-          n.style.backgroundColor = "#3097D1";
-          r.style.display = "inline";
-          s.style.display = "none";
-          t.style.display = "inline";
-          t.style.color = "white";
-          u.style.display = "none";
-          var l = document.getElementsByTagName("a");
-          var o = document.getElementsByTagName("h4");
-          var q = document.getElementsByTagName("h1");
-          for(m=0; m<20; m++){l[m].style.color = "white";}
-          l[16].style.color = "#212529";
-          l[16].style.backgroundColor = null;
-          for(p=0; p<5; p++){
-            o[p].style.color = "#343a40";
-            o[p].style.backgroundColor = "rgba(0, 0, 0, .03)"
-          }
-          q[0].style.color = "white";
+            j += 1;
+            return j;
         }
 
-          j += 1;
-          return j;
-    }
-
-    var fs = 16
-    function incFontSize() {
-        var fontS = document.getElementById("tekst1")
-        if (fs == 16) {
-            fontS.style.fontSize = "18px";
-            fs = 18
-        } else if (fs == 18) {
-            fontS.style.fontSize = "20px";
-            fs = 20; 
-        } else if (fs == 20) {
-            fontS.style.fontSize = "22px";
-            fs = 22; 
-        } else if (fs == 22) {
-            fontS.style.fontSize = "24px";
-            fs = 24; 
+        var fs = 16
+        function incFontSize() {
+            var fontS = document.getElementById("font")
+            if (fs == 16) {
+                fontS.style.fontSize = "18px";
+                fs = 18
+            } else if (fs == 18) {
+                fontS.style.fontSize = "20px";
+                fs = 20;
+            } else if (fs == 20) {
+                fontS.style.fontSize = "22px";
+                fs = 22;
+            } else if (fs == 22) {
+                fontS.style.fontSize = "24px";
+                fs = 24;
+            }
         }
-    }
 
-    function decFontSize() {
-        var fontS = document.getElementById("tekst1")
-        if (fs == 24) {
-            fontS.style.fontSize = "22px";
-            fs = 22
-        } else if (fs == 22) {
-            fontS.style.fontSize = "20px";
-            fs = 20; 
-        } else if (fs == 20) {
-            fontS.style.fontSize = "18px";
-            fs = 18; 
-        } else if (fs == 18) {
-            fontS.style.fontSize = "16px";
-            fs = 16; 
+        function decFontSize() {
+            var fontS = document.getElementById("font")
+            if (fs == 24) {
+                fontS.style.fontSize = "22px";
+                fs = 22
+            } else if (fs == 22) {
+                fontS.style.fontSize = "20px";
+                fs = 20;
+            } else if (fs == 20) {
+                fontS.style.fontSize = "18px";
+                fs = 18;
+            } else if (fs == 18) {
+                fontS.style.fontSize = "16px";
+                fs = 16;
+            }
         }
-    }
 
 
     </script>
 </head>
+
 <body>
     <header>
-      <nav id="main-nav" role="navigation">
-        <ul>
-            <li class="mainBar"><a href="#topic">Topic</a></li>
-            <li class="mainBar"><a href="#introduction">Introduction</a></li>
-            <li class="mainBar"><a href="#challenge">Challenge</a></li>
-            <li class="mainBar"><a href="#proposal">Our Proposal</a></li>
-            <li class="mainBar"><a href="aboutus.html">About us</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
-              <i class="material-icons al-m" id="icon-on">invert_colors</i>
-              <i class="material-icons al-m d-none" id="icon-off" >invert_colors_off</i>
-                </a>
-            </li>
-        </ul>
-      </nav>
-    <nav id="dropdown-navbar" role="navigation">
-        <a id="dro-btn"  onclick="dro()" data-target="#dro-list" aria-expanded="false" aria-controls="dro-list" aria-label="toggle dro-list">
-          <i class="material-icons al-m">line_weight</i>
-        </a>
-        <ul id="dro-list">
-            <li class="droBar col-"><a href="#topic">Topic</a></li>
-            <li class="droBar col-"><a href="#introduction">Introduction</a></li>
-            <li class="droBar col-"><a href="#challenge">Challenge</a></li>
-            <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
-            <li class="droBar col-"><a href="#aboutus">About us</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a></li>
-            <li class="droBar col-"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
-              <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
-              <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+        <nav id="main-nav" role="navigation">
+            <ul>
+                <li class="mainBar">
+                    <a href="#topic">Topic</a>
+                </li>
+                <li class="mainBar">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li class="mainBar">
+                    <a href="#challenge">Challenge</a>
+                </li>
+                <li class="mainBar">
+                    <a href="#proposal">Our Proposal</a>
+                </li>
+                <li class="mainBar">
+                    <a href="aboutus.html">About us</a>
+                </li>
+                <li class="mainBar">
+                    <a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a>
+                </li>
+                <li class="mainBar">
+                    <a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a>
+                </li>
+                <li class="mainBar">
+                    <a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+                        <i class="material-icons al-m" id="icon-on">invert_colors</i>
+                        <i class="material-icons al-m d-none" id="icon-off">invert_colors_off</i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="dropdown-navbar" role="navigation">
+            <a id="dro-btn" onclick="dro()" data-target="#dro-list" aria-expanded="false" aria-controls="dro-list" aria-label="toggle dro-list">
+                <i class="material-icons al-m">line_weight</i>
+            </a>
+            <ul id="dro-list">
+                <li class="droBar col-">
+                    <a href="#topic">Topic</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="#challenge">Challenge</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="#proposal">Our Proposal</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="#aboutus">About us</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a>
+                </li>
+                <li class="droBar col-">
+                    <a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+                        <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
+                        <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main role="main" id="main">
         <div class="overskrift" id="topic">
@@ -261,11 +289,9 @@
                         <h4 class="tekstboks3" id="overskrift1">What are taxes?</h4>
                         <div class="tekstboks4">
                             <p class="tekstboks5" id="font">
-                            <p class="tekstboks5" id="tekst1">
-
                                 Taxes are monetary contributions that citizens pay to the government. They are an important source of income to cover public
                                 expenses (Store Norske Leksikon, 2014).
-                                <span  id="button1"  class="dtext1 d-none"> These expenses are for example public health care, free education, social welfare and care
+                                <span id="button1" class="dtext1 d-none"> These expenses are for example public health care, free education, social welfare and care
                                     for the elderly.
                                     <br> These are services that are part of the (Norwegian) welfare system, and each year they
                                     cost the public great amounts of money. Therefore it is essential that everyone contributes
@@ -273,7 +299,7 @@
                                     according to their ability and receiving benefits by their needs. Those with a high income,
                                     which determines ability, pay more than those with a lower income.</span>
                             </p>
-                    <a class="merknapp" href="javascript:void(0)" role="button" onclick="more1()">
+                            <a class="merknapp" href="javascript:void(0)" role="button" onclick="more1()">
                                 <span id="more1">more</span>
                             </a>
                         </div>
@@ -281,24 +307,22 @@
                 </div>
             </div>
             <div class="bilder">
-                    <img src="taxman.jpg" class="img-bilder" alt="A cartoon character of a man running around carrying a bag of money and an outstretched hand with word taxes on it seems like want to catch him ">
-                    <a id="bildekilde" href="https://www.conservativereview.com/-/media/images/conservative-review/article-images/2016/august/tax-man.jpg?h=675&w=1200&la=en&hash=297BBECE66B78AA43EDDD78182BC94690D88E5AA">source</a>
+                <img src="taxman.jpg" class="img-bilder" alt="A cartoon character of a man running around carrying a bag of money and an outstretched hand with word taxes on it seems like want to catch him ">
+                <a id="bildekilde" href="https://www.conservativereview.com/-/media/images/conservative-review/article-images/2016/august/tax-man.jpg?h=675&w=1200&la=en&hash=297BBECE66B78AA43EDDD78182BC94690D88E5AA">source</a>
             </div>
             <div class="tekstboks" id="challenge">
                 <div class="tekstboks1">
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift2">The Challenge</h4>
                         <div class="tekstboks4">
-                            <p class="tekstboks5" id="font2">
-
-                            <p class="tekstboks5" id="tekst2">
+                            <p class="tekstboks5" id="font">
                                 This fall there was a government election in Norway. As a part of the election campaigns several discussions about taxes
                                 arose. Where some parties and politicians want to cut taxes, others want to increase them.
                                 <br>A few weeks later, the national budget was presented to the public. The national budget is
                                 an estimate of the country’s predicted income and expenses for the coming year, and also
                                 determines how the government wants to spend future income and how they plan to prioritize
                                 between predicted expenses (Thomassen & Stoltz, 2017).
-                                <span class="dtext2 d-none"  id="button2">
+                                <span class="dtext2 d-none" id="button2">
                                     <br>
                                     <br> In 2014 there were estimations that about 150 billion NOK were not paid in taxes as
                                     a result of a black labor market valued to 420 billion NOK, which was 14 % of the gross
@@ -325,11 +349,7 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift3">Our solution</h4>
                         <div class="tekstboks4">
-
-                            <p class="tekstboks5" id="font3">
-
-                            <p class="tekstboks5" id="tekst3">
-
+                            <p class="tekstboks5" id="font">
                                 We hypothesize that many don’t fully understand that the welfare society is financed through taxes, and that everyone needs
                                 to contribute in order for this to function. Countries have gone bankrupt with the lack of
                                 tax income as a contributing case/reason for this. Therefore, we want to create an educational
@@ -353,21 +373,17 @@
                 </div>
             </div>
             <div class="bilder">
-                    <img src="EksempelSKATT.png" class="img-bilder" alt="National budget pie chart">
+                <img src="EksempelSKATT.png" class="img-bilder" alt="National budget pie chart">
             </div>
             <div class="bilder">
-                    <img src="EksempelSKATT2.png" class="img-bilder" alt="National income pie chart">
+                <img src="EksempelSKATT2.png" class="img-bilder" alt="National income pie chart">
             </div>
             <div class="tekstboks">
                 <div class="tekstboks1">
                     <div class="tekstboks2">
                         <h4 class="tekstboks3"></h4>
                         <div class="tekstboks4">
-
-                            <p class="tekstboks5" id="font4">
-
-                            <p class="tekstboks5" id="tekst4">
-
+                            <p class="tekstboks5" id="font">
                                 Our interactive charts would help visualize the typical income and expenditures of a government and shed light on how taxes
                                 are spent. The charts would be divided into categories healthcare or transportation. Pressing
                                 these categories would animate charts with subcategories, such as healthcare research and
@@ -385,7 +401,7 @@
                     <div class="tekstboks2">
                         <h4 class="tekstboks3" id="overskrift4">Sources</h4>
                         <div class="tekstboks4">
-                            <p class="tekstboks5" id="font5">
+                            <p class="tekstboks5" id="font">
                                 <span class="dtext4 d-none" id="button4">
                                     <br>
                                     <br> Skatteetaten. (2017, 10. November). Skatt i Norge - litt om skattesystemet. Hentet 10.
