@@ -225,10 +225,8 @@ return x;}
           var l = document.getElementsByTagName("a");
           var o = document.getElementsByTagName("h4");
           var q = document.getElementsByTagName("h1");
-          var t = document.getElementById("dro-icon-on");
-          var u = document.getElementById("dro-icon-off");
-          for(m=0; m<20; m++){l[m].style.color = "yellow";}
-          l[16].style.backgroundColor = "#343a40"
+          for(m=0; m<22; m++){l[m].style.color = "yellow";}
+          l[18].style.backgroundColor = "#343a40"
           for(p=0; p<5; p++){
             o[p].style.color = "yellow";
             o[p].style.backgroundColor = "#343a40";
@@ -266,7 +264,9 @@ return x;}
           return j;
     }
 
-
+    function scrollUp() {
+        document.documentElement.scrollTop = 0;
+    }
     </script>
 </head>
 <body>
@@ -503,11 +503,12 @@ return x;}
     <footer class="container">
         <hr class="linje">
         <p class="footer" id="foot">Final Project</p>
+        <button class="scrollUp" onclick="scrollUp()"><i class="material-icons">keyboard_arrow_up</i></button>
     </footer>
-    <button onclick="topFunction()" type="button" class="scrollknapp" id="scroll">
+    <!--<button onclick="topFunction()" type="button" class="scrollknapp" id="scroll">
         <i class="material-icons align-middle item-light">^</i>
     </button>
-    </div>
+  </div>-->
 </body>
 
 </html>

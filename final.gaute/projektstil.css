@@ -332,7 +332,22 @@ li a{
   border-radius: 8px;
 }
 
-=======
+.scrollUp{
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  background-color: #3097D1;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 50px;
+  height: 40px;
+  color: white;
+  outline: none;
+
+}
+
+/*=======*/
 
 .scrollknapp {
   position: fixed;
