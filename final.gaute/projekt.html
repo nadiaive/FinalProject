@@ -259,8 +259,64 @@
                 q[0].style.color = "white";
             }
 
+<<<<<<< HEAD
             j += 1;
             return j;
+=======
+    var j = 0;
+    function InvertColor() {
+        if(j % 2 == 0){
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#343a40";
+          n.style.backgroundColor = "#343a40";
+          r.style.display = "none";
+          s.style.display = "inline";
+          t.style.display = "none";
+          u.style.display = "block";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          for(m=0; m<20; m++){l[m].style.color = "yellow";}
+          l[16].style.backgroundColor = "#343a40"
+          for(p=0; p<5; p++){
+            o[p].style.color = "yellow";
+            o[p].style.backgroundColor = "#343a40";
+          }
+          q[0].style.color = "yellow";
+        }
+        else {
+          var k = document.getElementById("main-nav");
+          var n = document.getElementById("dropdown-navbar");
+          var r = document.getElementById("icon-on");
+          var s = document.getElementById("icon-off");
+          var t = document.getElementById("dro-icon-on");
+          var u = document.getElementById("dro-icon-off");
+          k.style.backgroundColor = "#3097D1";
+          n.style.backgroundColor = "#3097D1";
+          r.style.display = "inline";
+          s.style.display = "none";
+          t.style.display = "inline";
+          t.style.color = "white";
+          u.style.display = "none";
+          var l = document.getElementsByTagName("a");
+          var o = document.getElementsByTagName("h4");
+          var q = document.getElementsByTagName("h1");
+          for(m=0; m<20; m++){l[m].style.color = "white";}
+          l[16].style.color = "#212529";
+          l[16].style.backgroundColor = null;
+          for(p=0; p<5; p++){
+            o[p].style.color = "#343a40";
+            o[p].style.backgroundColor = "rgba(0, 0, 0, .03)"
+          }
+          q[0].style.color = "white";
+>>>>>>> 7d143f7958834fb2a80ffacbef5a0ba6648bd138
         }
 
         var fs = 16
@@ -298,12 +354,12 @@
         }
     }
 
-
     </script>
 </head>
 
 <body>
     <header>
+<<<<<<< HEAD
         <nav id="main-nav" role="navigation">
             <ul>
                 <li class="mainBar">
@@ -386,6 +442,69 @@
                             </li>
             </ul>
         </nav>
+=======
+      <nav id="main-nav" role="navigation">
+        <ul>
+            <li class="mainBar"><a href="#topic">Topic</a></li>
+            <li class="mainBar"><a href="#introduction">Introduction</a></li>
+            <li class="mainBar"><a href="#challenge">Challenge</a></li>
+            <li class="mainBar"><a href="#proposal">Our Proposal</a></li>
+            <li class="mainBar"><a href="aboutus.html">About us</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" id="incFont" role="button">A</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" id="DecFont" role="button">a</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+              <i class="material-icons al-m" id="icon-on">invert_colors</i>
+              <i class="material-icons al-m d-none" id="icon-off" >invert_colors_off</i>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    <nav id="dropdown-navbar" role="navigation">
+        <a id="dro-btn"  onclick="dro()" data-target="#dro-list" aria-expanded="false" aria-controls="dro-list" aria-label="toggle dro-list">
+          <i class="material-icons al-m">line_weight</i>
+        </a>
+        <ul id="dro-list">
+            <li class="droBar col-"><a href="#topic">Topic</a></li>
+            <li class="droBar col-"><a href="#introduction">Introduction</a></li>
+            <li class="droBar col-"><a href="#challenge">Challenge</a></li>
+            <li class="droBar col-"><a href="#proposal">Our Proposal</a></li>
+            <li class="droBar col-"><a href="#aboutus">About us</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" id="incFont" role="button">A</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" id="DecFont" role="button">a</a></li>
+            <li class="droBar col-"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
+              <i class="material-icons color-on al-m" id="dro-icon-on">invert_colors</i>
+              <i class="material-icons color-off al-m d-none" id="dro-icon-off">invert_colors_off</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+  <!--
+    <nav class="dropdown-navbar">
+
+        <div class="navbar" id="meny">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation"
+                aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">(menu button)</span>
+            </button>
+            <div class="knapper">
+                <a class="knapp" href="#topic">Topic</a>
+                <a class="knapp" href="#introduction">Introduction</a>
+                <a class="knapp" href="#challenge">Challenge</a>
+                <a class="knapp" href="#proposal">Our Proposal</a>
+                <a class="knapp" href="aboutus.html">About Us</a>
+                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setFont()">A</a>
+                <a role="button" class="knapp" href="#sameposition" id="decFont">a</a>
+                <a role="button" class="knapp" href="#sameposition" type="button" id="button" value = "button" onclick="setColor('button', '#101010')";>
+                    <i class="material-icons md-18 align-middle invert_colors border border-warning rounded">invert_colors</i>
+                    <i class="material-icons md-18 align-middle invert_colors_off d-none">invert_colors_off</i>
+                </a>
+            </div>
+        </div>
+            </li>
+        </ul>
+      </nav>-->
+>>>>>>> 7d143f7958834fb2a80ffacbef5a0ba6648bd138
     </header>
     <main role="main" id="main">
         <div class="overskrift" id="topic">
