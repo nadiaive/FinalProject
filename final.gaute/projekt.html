@@ -266,6 +266,41 @@ return x;}
           return j;
     }
 
+    var fs = 16
+    function incFontSize() {
+        var fontS = document.getElementById("tekst1")
+        if (fs == 16) {
+            fontS.style.fontSize = "18px";
+            fs = 18
+        } else if (fs == 18) {
+            fontS.style.fontSize = "20px";
+            fs = 20; 
+        } else if (fs == 20) {
+            fontS.style.fontSize = "22px";
+            fs = 22; 
+        } else if (fs == 22) {
+            fontS.style.fontSize = "24px";
+            fs = 24; 
+        }
+    }
+
+    function decFontSize() {
+        var fontS = document.getElementById("tekst1")
+        if (fs == 24) {
+            fontS.style.fontSize = "22px";
+            fs = 22
+        } else if (fs == 22) {
+            fontS.style.fontSize = "20px";
+            fs = 20; 
+        } else if (fs == 20) {
+            fontS.style.fontSize = "18px";
+            fs = 18; 
+        } else if (fs == 18) {
+            fontS.style.fontSize = "16px";
+            fs = 16; 
+        }
+    }
+
 
     </script>
 </head>
@@ -278,8 +313,8 @@ return x;}
             <li class="mainBar"><a href="#challenge">Challenge</a></li>
             <li class="mainBar"><a href="#proposal">Our Proposal</a></li>
             <li class="mainBar"><a href="aboutus.html">About us</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" id="incFont" role="button">A</a></li>
-            <li class="mainBar"><a href="javascript:void(0)" id="DecFont" role="button">a</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" onclick="incFontSize()" id="incFont" role="button">A</a></li>
+            <li class="mainBar"><a href="javascript:void(0)" onclick="decFontSize()" id="DecFont" role="button">a</a></li>
             <li class="mainBar"><a href="javascript:void(0)" onclick="InvertColor()" id="color-blindness-button" role="button">
               <i class="material-icons al-m" id="icon-on">invert_colors</i>
               <i class="material-icons al-m d-none" id="icon-off" >invert_colors_off</i>
