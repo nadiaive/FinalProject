@@ -118,7 +118,7 @@ function setColor(btn, color) {
         document.getElementById("overskrift2").style.color = "#212529";
         document.getElementById("overskrift3").style.color = "#212529";
         document.getElementById("overskrift4").style.color = "#212529";
-        document.getElementById("meny").style.backgroundColor = "#3097D1";
+        document.getElementById("main-nav").style.backgroundColor = "#3097D1";
         document.getElementById("scroll").style.backgroundColor = "#3097D1";
         document.getElementById("foot").style.color = "#212529";
         document.getElementById("bildekilde").style.color = "#212529";
@@ -133,13 +133,16 @@ function setColor(btn, color) {
         document.getElementById("overskrift2").style.color = "#ffc107";
         document.getElementById("overskrift3").style.color = "#ffc107";
         document.getElementById("overskrift4").style.color = "#ffc107";
-        document.getElementById("meny").style.backgroundColor = "#343a40";
+        document.getElementById("main-nav").style.backgroundColor = "#343a40";
         document.getElementById("scroll").style.backgroundColor = "#ffc107";
         document.getElementById("foot").style.color = "white";
         document.getElementById("bildekilde").style.color = "white";
         a = 0;
     }
 }
+
+
+
 
 function resizeText(multiplier) {
     if (document.body.style.fontSize == "") {
